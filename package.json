@@ -15,6 +15,7 @@
     "generate": "nuxt generate",
     "build:gh-pages": "DEPLOY_ENV=GH=PAGES nuxt build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "predeploy": "yarn generate:gh-pages",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
