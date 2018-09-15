@@ -12,10 +12,12 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
     "@types/node": "^9.4.6",
+    "push-dir": "^0.4.1",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2"
   }
