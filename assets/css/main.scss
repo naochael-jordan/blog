@@ -1,0 +1,12 @@
+:root {
+  font-size: 10px;
+}
+
+a {
+  color: #365899;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
