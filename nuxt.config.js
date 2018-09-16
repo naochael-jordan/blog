@@ -63,9 +63,17 @@ module.exports = {
   /*
   ** Build configuration
   */
-  css: ["normalize.css", "~/assets/css/main.scss"],
+  css: [
+    "normalize.css",
+    "~/assets/css/main.scss",
+    "vue-material/dist/vue-material.min.css"
+  ],
   build: {},
-  modules: ["@nuxtjs/axios", "~/modules/typescript.js"],
+  modules: [
+    "@nuxtjs/axios",
+    "~/modules/typescript.js",
+    ["nuxt-sass-resources-loader", "~/assets/css/resources.scss"]
+  ],
   axios: {},
 
   ...routerBase
