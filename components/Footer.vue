@@ -5,7 +5,6 @@
         <md-avatar class="md-large">
           <img src="~/assets/images/profile.jpg" alt="Naochael Jordan">
         </md-avatar>
-         <md-button>Default</md-button>
       </section>
     </div>
   </footer>
@@ -20,8 +19,19 @@ export default Vue.extend({});
 
 
 <style lang="scss" scoped>
+@import "~/assets/css/variables.scss";
+
 footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
   color: white;
   background: #333;
+
+  .container {
+    width: $width;
+    margin: 0 auto;
+  }
 }
 </style>

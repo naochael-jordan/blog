@@ -1,8 +1,10 @@
 <template>
-  <div>
+  <div class="container">
     <Header />
 
-    <nuxt/>
+    <div class="contents">
+      <nuxt/>
+    </div>
 
     <Footer />
   </div>
@@ -24,3 +26,15 @@ export default class Default extends Vue {
   @Prop() person;
 }
 </script>
+
+<style lang="scss" scoped>
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .contents {
+    flex: 1;
+  }
+}
+</style>
