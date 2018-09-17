@@ -35,7 +35,7 @@ module.exports = {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
   },
   head: {
-    title: "tt1",
+    title: "Naochael Jordan Blog",
     meta: [
       { charset: "utf-8" },
       {
@@ -45,7 +45,7 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Nuxt.js project"
+        content: "Naochael Jordan Blog"
       }
     ],
     link: [
