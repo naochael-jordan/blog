@@ -72,7 +72,16 @@ module.exports = {
   build: {
     vendor: ["vue-material"]
   },
-  modules: ["@nuxtjs/axios", "~/modules/typescript.js"],
+  modules: [
+    "@nuxtjs/axios",
+    "~/modules/typescript.js",
+    [
+      "@nuxtjs/google-analytics",
+      {
+        id: "UA-125875531-1"
+      }
+    ]
+  ],
   axios: {},
 
   ...routerBase
