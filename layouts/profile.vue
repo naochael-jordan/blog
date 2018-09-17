@@ -6,7 +6,7 @@
       <nuxt/>
     </div>
 
-    <Footer />
+    <Footer :hideProfile="true" />
   </div>
 </template>
 

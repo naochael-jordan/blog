@@ -14,6 +14,16 @@
         <li>
           <nuxt-link to="/profile">Profile</nuxt-link>
         </li>
+        <li>
+          <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">
+            Twitter
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/naochael-jordan" target="_blank" rel="noopener">
+            Github
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -24,7 +34,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   color: white;
   background: #333;
   border-bottom: 1px solid black;

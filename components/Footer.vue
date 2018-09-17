@@ -1,9 +1,9 @@
 <template>
   <footer>
     <section class="container">
-      <h2>Author</h2>
+      <h2 v-if="!hideProfile">Author</h2>
 
-      <div class="box">
+      <div v-if="!hideProfile" class="box">
         <md-avatar class="md-large">
           <img src="~/assets/images/profile.jpg" alt="Naochael Jordan">
         </md-avatar>
@@ -36,12 +36,16 @@
   </footer>
 </template>
 
-
 <script lang="ts">
 import Vue from "vue";
-import { Avator } from "vue-material/dist/components";
-
-export default Vue.extend({});
+export default Vue.extend({
+  props: {
+    hideProfile: {
+      type: Boolean,
+      default: false
+    }
+  }
+});
 </script>
 
 
@@ -49,10 +53,10 @@ export default Vue.extend({});
 @import "~/assets/css/variables.scss";
 
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 40px 0 20px;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
+  padding: 10px 0;
   color: white;
   background: #333;
 
@@ -63,6 +67,7 @@ footer {
 
   h2 {
     margin: 0 0 20px 0;
+    padding-top: 20px;
     font-size: 2.4rem;
   }
 
@@ -75,6 +80,7 @@ footer {
   .box {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   .info {
@@ -94,7 +100,7 @@ footer {
   }
 
   address {
-    margin: 20px 0 0;
+    margin: 0;
     text-align: center;
   }
 }
