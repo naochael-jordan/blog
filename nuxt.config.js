@@ -45,7 +45,8 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "Naochael Jordan Blog"
+        content:
+          "Naochael Jordan Blog. ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りをよく触ってます。"
       }
     ],
     link: [
