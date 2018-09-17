@@ -46,6 +46,11 @@
         </a>
       </li>
     </ul>
+
+    <h2>Contact</h2>
+    <p>
+      naochael.jordan@gmail.com
+    </p>
   </section>
 </template>
 
