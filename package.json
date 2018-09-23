@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/node": "^9.4.6",
     "node-sass": "^4.9.3",
+    "processmd": "^4.2.1",
     "push-dir": "^0.4.1",
     "sass-loader": "^7.1.0",
     "ts-loader": "^3.5.0",
