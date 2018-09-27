@@ -5,6 +5,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/google-analytics": "^2.0.2",
+    "markdown-it": "^8.4.2",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.3.0",
     "nuxt-property-decorator": "^1.2.0",
@@ -20,7 +21,8 @@
     "build:gh-pages": "DEPLOY_ENV=GH=PAGES nuxt build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
     "predeploy": "yarn generate:gh-pages",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "processmd": "processmd 'markdown/**/*.{yml,md}' --stdout --outputDir static/json > static/json/summary.json"
   },
   "devDependencies": {
     "@types/node": "^9.4.6",

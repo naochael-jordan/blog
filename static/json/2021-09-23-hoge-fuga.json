@@ -1,0 +1,11 @@
+{
+  "title": "記事のタイトル",
+  "created_at": "2019-09-23T00:00:00.000Z",
+  "bodyContent": "## 見出し 2\n\n本文です。\n\n![あああ](/assets/images/profile.jpg)\n\n```js\nconst f = () => {};\n```",
+  "bodyHtml": "<h2>見出し 2</h2>\n<p>本文です。</p>\n<p><img src=\"/assets/images/profile.jpg\" alt=\"あああ\"></p>\n<pre><code class=\"hljs\"><span class=\"hljs-keyword\">const</span> f = <span class=\"hljs-function\"><span class=\"hljs-params\">()</span> =&gt;</span> {};</code></pre>",
+  "dir": "static/json",
+  "base": "2021-09-23-hoge-fuga.json",
+  "ext": ".json",
+  "sourceBase": "2021-09-23-hoge-fuga.md",
+  "sourceExt": ".md"
+}

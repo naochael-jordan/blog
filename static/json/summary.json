@@ -1,0 +1,66 @@
+{
+  "fileMap": {
+    "static/json/2018-09-23-hoge-fuga.json": {
+      "title": "記事のタイトル",
+      "created_at": "2019-09-23T00:00:00.000Z",
+      "dir": "static/json",
+      "base": "2018-09-23-hoge-fuga.json",
+      "ext": ".json",
+      "sourceBase": "2018-09-23-hoge-fuga.md",
+      "sourceExt": ".md"
+    },
+    "static/json/2000-09-23-hoge-fuga.json": {
+      "title": "記事のタイトル",
+      "created_at": "2019-09-23T00:00:00.000Z",
+      "dir": "static/json",
+      "base": "2000-09-23-hoge-fuga.json",
+      "ext": ".json",
+      "sourceBase": "2000-09-23-hoge-fuga.md",
+      "sourceExt": ".md"
+    },
+    "static/json/2019-09-23-hoge-fuga.json": {
+      "title": "記事のタイトル",
+      "created_at": "2019-09-23T00:00:00.000Z",
+      "dir": "static/json",
+      "base": "2019-09-23-hoge-fuga.json",
+      "ext": ".json",
+      "sourceBase": "2019-09-23-hoge-fuga.md",
+      "sourceExt": ".md"
+    },
+    "static/json/2021-09-23-hoge-fuga.json": {
+      "title": "記事のタイトル",
+      "created_at": "2019-09-23T00:00:00.000Z",
+      "dir": "static/json",
+      "base": "2021-09-23-hoge-fuga.json",
+      "ext": ".json",
+      "sourceBase": "2021-09-23-hoge-fuga.md",
+      "sourceExt": ".md"
+    },
+    "static/json/hoge.json": {
+      "title": "記事のタイトル",
+      "created_at": "2018-01-01T00:00:00.000Z",
+      "dir": "static/json",
+      "base": "hoge.json",
+      "ext": ".json",
+      "sourceBase": "hoge.md",
+      "sourceExt": ".md"
+    },
+    "static/json/2020-09-23-hoge-fuga.json": {
+      "title": "記事のタイトル",
+      "created_at": "2019-09-23T00:00:00.000Z",
+      "dir": "static/json",
+      "base": "2020-09-23-hoge-fuga.json",
+      "ext": ".json",
+      "sourceBase": "2020-09-23-hoge-fuga.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "markdown/2000-09-23-hoge-fuga.md",
+    "markdown/2018-09-23-hoge-fuga.md",
+    "markdown/2019-09-23-hoge-fuga.md",
+    "markdown/2020-09-23-hoge-fuga.md",
+    "markdown/2021-09-23-hoge-fuga.md",
+    "markdown/hoge.md"
+  ]
+}
