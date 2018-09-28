@@ -90,10 +90,6 @@ module.exports = {
     "@nuxtjs/markdownit"
   ],
 
-  generate: {
-    routes: ["/", "/users/1", "/users/2", "/users/3"]
-  },
-
   markdownit: {
     preset: "default",
     linkify: true,
