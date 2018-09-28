@@ -9,7 +9,7 @@
 export default {
   async asyncData({ params }) {
     console.log(params);
-    const fileContent = await import(`~/assets/markdown/${params.slug}.md`);
+    const fileContent = await import(`~/static/posts/${params.slug}.md`);
     return {
       content: fileContent
     };
