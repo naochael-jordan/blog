@@ -98,7 +98,7 @@ module.exports = {
   },
 
   generate: {
-    routes: ["/2018-10-01-first-post"]
+    routes: ["/blog/2018-10-01-first-post"]
   },
 
   modules: [
