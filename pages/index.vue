@@ -2,7 +2,7 @@
   <section>
     <h1>Blog</h1>
 
-    <nuxt-link class="nav-item" to="/test1">Post 1</nuxt-link>
+    <nuxt-link class="nav-item" to="/2018-10-01/test1">Post 1</nuxt-link>
     <!-- <div v-html="postContent"></div> -->
     <ul>
       <li v-for="(article, index) in $hoge" :key="index">
