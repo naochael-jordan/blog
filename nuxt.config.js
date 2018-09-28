@@ -33,7 +33,11 @@ const routerBase =
           base: "/blog/"
         }
       }
-    : {};
+    : {
+        router: {
+          base: "/blog/"
+        }
+      };
 
 module.exports = {
   env: {
