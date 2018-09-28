@@ -1,3 +1,8 @@
+// URL
+// /blog/ TOP
+// /blog/profile プロフィール
+// /blog/hoge-fuga ページ詳細
+
 const parseArgs = require("minimist");
 const argv = parseArgs(process.argv.slice(2), {
   alias: {
@@ -69,7 +74,7 @@ module.exports = {
     "~/assets/css/main.scss",
     { src: "vue-material/dist/vue-material.min.css", lang: "css" }
   ],
-  plugins: [{ src: "~/plugins/vue-material" }],
+  plugins: [{ src: "~/plugins/vue-material" }, "~/plugins/hoge.js"],
   build: {
     vendor: ["vue-material"]
   },
@@ -81,8 +86,21 @@ module.exports = {
       {
         id: "UA-125875531-1"
       }
-    ]
+    ],
+    "@nuxtjs/markdownit"
   ],
+
+  generate: {
+    routes: ["/", "/users/1", "/users/2", "/users/3"]
+  },
+
+  markdownit: {
+    preset: "default",
+    linkify: true,
+    breaks: true
+    // use: [["markdown-it-container", containerName], "markdown-it-attrs"]
+  },
+
   axios: {},
 
   ...routerBase
