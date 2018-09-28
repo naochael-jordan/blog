@@ -97,6 +97,10 @@ module.exports = {
     }
   },
 
+  generate: {
+    routes: ["/2018-10-01-first-post"]
+  },
+
   modules: [
     "@nuxtjs/axios",
     "~/modules/typescript.js",
