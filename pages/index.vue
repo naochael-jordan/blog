@@ -2,9 +2,9 @@
   <section>
     <h1>Blog</h1>
     <ul>
-      <li v-for="(article, index) in $hoge" :key="index">
+      <li v-for="(post, index) in posts" :key="index">
         <p class="date">2018/09/10</p>
-        <nuxt-link to="/test1">
+        <nuxt-link :to="`/${post}`">
           <p class="title">ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
         </nuxt-link>
       </li>
@@ -14,28 +14,17 @@
 
 <script>
 export default {
+  data() {
+    return {
+      posts: []
+    };
+  },
+
   created() {
+    this.posts = this.$hoge;
     console.log(this.$hoge);
   }
 };
-// import axios from "axios";
-// import { Component, Vue } from "nuxt-property-decorator";
-// import { State } from "vuex-class";
-
-// @Component
-// export default class extends Vue {
-//   sourceFileArray = [];
-//   fileMap = {};
-//   postContent = "hoge";
-
-//   async created() {
-//     const summary = await axios.get("./json/summary.json");
-//     this.sourceFileArray = summary.data.sourceFileArray;
-//     this.fileMap = summary.data.fileMap;
-//     this.postContent = require("../posts/hoge.md");
-//     // console.log(this.$hoge);
-//   }
-// }
 </script>
 <style lang="scss" scoped>
 @import "~/assets/css/variables.scss";

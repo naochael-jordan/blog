@@ -89,7 +89,12 @@ module.exports = {
   plugins: [{ src: "~/plugins/vue-material" }, "~/plugins/hoge.js"],
 
   build: {
-    vendor: ["vue-material"]
+    vendor: ["vue-material"],
+    extend: function(config, { isDev, isClient }) {
+      config.node = {
+        fs: "empty"
+      };
+    }
   },
 
   modules: [
