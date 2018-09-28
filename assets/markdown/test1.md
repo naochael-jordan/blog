@@ -1,6 +1,6 @@
 # hogef ugaAn h1 header
 
-![aaaa](../images/profile.jpg)
+![aaaa](./images/profile.jpg)
 
 Paragraphs are separated by a blank line.
 
