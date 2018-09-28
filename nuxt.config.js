@@ -26,23 +26,28 @@ const host =
 
 /* nuxt.config.js */
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-const routerBase =
-  process.env.DEPLOY_ENV === "GH_PAGES"
-    ? {
-        router: {
-          base: "/blog/"
-        }
-      }
-    : {
-        router: {
-          base: "/blog/"
-        }
-      };
+// const routerBase =
+//   process.env.DEPLOY_ENV === "GH_PAGES"
+//     ? {
+//         router: {
+//           base: "/blog/"
+//         }
+//       }
+//     : {
+//         router: {
+//           base: "/blog/"
+//         }
+//       };
 
 module.exports = {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
   },
+
+  router: {
+    base: "/blog/"
+  },
+
   head: {
     title: "Naochael Jordan Blog",
     meta: [
@@ -66,10 +71,12 @@ module.exports = {
       }
     ]
   },
+
   /*
   ** Customize the progress-bar color
   */
   loading: { color: "#3B8070" },
+
   /*
   ** Build configuration
   */
@@ -78,10 +85,13 @@ module.exports = {
     "~/assets/css/main.scss",
     { src: "vue-material/dist/vue-material.min.css", lang: "css" }
   ],
+
   plugins: [{ src: "~/plugins/vue-material" }, "~/plugins/hoge.js"],
+
   build: {
     vendor: ["vue-material"]
   },
+
   modules: [
     "@nuxtjs/axios",
     "~/modules/typescript.js",
@@ -101,7 +111,5 @@ module.exports = {
     // use: [["markdown-it-container", containerName], "markdown-it-attrs"]
   },
 
-  axios: {},
-
-  ...routerBase
+  axios: {}
 };

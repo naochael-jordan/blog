@@ -1,13 +1,10 @@
 <template>
   <section>
     <h1>Blog</h1>
-
-    <nuxt-link class="nav-item" to="/2018-10-01/test1">Post 1</nuxt-link>
-    <!-- <div v-html="postContent"></div> -->
     <ul>
       <li v-for="(article, index) in $hoge" :key="index">
         <p class="date">2018/09/10</p>
-        <nuxt-link to="/">
+        <nuxt-link to="/test1">
           <p class="title">ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
         </nuxt-link>
       </li>
