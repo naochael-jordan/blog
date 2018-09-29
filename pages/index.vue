@@ -34,9 +34,6 @@ section {
   width: $width;
   margin: 50px auto;
 
-  h1 {
-  }
-
   li {
     display: flex;
     align-items: center;
