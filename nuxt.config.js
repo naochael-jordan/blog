@@ -1,8 +1,4 @@
-// URL
-// /blog/ TOP
-// /blog/profile プロフィール
-// /blog/hoge-fuga ページ詳細
-
+const fs = require("fs");
 const parseArgs = require("minimist");
 const argv = parseArgs(process.argv.slice(2), {
   alias: {
@@ -98,7 +94,11 @@ module.exports = {
   },
 
   generate: {
-    routes: ["/blog/2018-10-01-first-post"]
+    routes: fs
+      .readdirSync("./static")
+      .filter(i => i.match(/.md$/))
+      .map(f => f.replace(/.md$/, ""))
+      .map(f => `/blog/${f}`)
   },
 
   modules: [
