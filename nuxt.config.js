@@ -98,7 +98,7 @@ module.exports = {
       .readdirSync("./static")
       .filter(i => i.match(/.md$/))
       .map(f => f.replace(/.md$/, ""))
-      .map(f => `/blog/${f}`)
+      .map(f => `/${f}`)
   },
 
   modules: [
