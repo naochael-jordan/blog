@@ -1,22 +1,16 @@
 <template>
   <div>
-    <!-- 1111 dynamiccccc -->
-    <div v-html="content" class="contentWrapper content"></div>
+    <div v-html="content"></div>
   </div>
 </template>
 
 <script>
 export default {
   async asyncData({ params }) {
-    console.log(params);
-    const fileContent = await import(`~/static/${params.slug}.md`);
+    const content = await import(`~/static/${params.slug}.md`);
     return {
-      content: fileContent
+      content
     };
-  },
-
-  created() {
-    console.log(this.$hoge);
   }
 };
 </script>

@@ -3,9 +3,9 @@
     <h1>Blog</h1>
     <ul>
       <li v-for="(post, index) in posts" :key="index">
-        <p class="date">2018/09/10</p>
-        <nuxt-link :to="`/${post}`">
-          <p class="title">ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
+        <p class="date">{{ format(post.attributes.date, 'YYYY-MM-DD') }}</p>
+        <nuxt-link :to="`/${post.fileName}`">
+          <p class="title">{{ post.attributes.title }}</p>
         </nuxt-link>
       </li>
     </ul>
@@ -13,16 +13,17 @@
 </template>
 
 <script>
+import { format } from "date-fns";
+
 export default {
-  data() {
-    return {
-      posts: []
-    };
+  computed: {
+    posts() {
+      return this.$store.state.posts;
+    }
   },
 
-  created() {
-    this.posts = this.$hoge;
-    console.log(this.$hoge);
+  methods: {
+    format
   }
 };
 </script>

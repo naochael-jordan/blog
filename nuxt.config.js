@@ -82,7 +82,7 @@ module.exports = {
     { src: "vue-material/dist/vue-material.min.css", lang: "css" }
   ],
 
-  plugins: [{ src: "~/plugins/vue-material" }, "~/plugins/hoge.js"],
+  plugins: ["~/plugins/init.js", { src: "~/plugins/vue-material" }],
 
   build: {
     vendor: ["vue-material"],
@@ -116,8 +116,8 @@ module.exports = {
   markdownit: {
     preset: "default",
     linkify: true,
-    breaks: true
-    // use: [["markdown-it-container", containerName], "markdown-it-attrs"]
+    breaks: true,
+    use: ["markdown-it-container", "markdown-it-attrs", "markdown-it-meta"]
   },
 
   axios: {}
