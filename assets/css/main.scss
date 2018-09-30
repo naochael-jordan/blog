@@ -2,62 +2,11 @@
   font-size: 10px;
 }
 
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Medium");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Yu Gothic";
-  src: local("Yu Gothic Bold");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: local("Helvetica Neue Regular");
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Helvetica Neue";
-  src: local("Helvetica Neue Regular");
-  font-weight: 200;
-}
-
-
-html {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
-}
-@media all and (-ms-high-contrast: none)  {
-  html {
-    font-family: Verdana, Meiryo, sans-serif;
-  }
-}
-@media all and (-ms-high-contrast: active) {
-  html {
-    font-family: Verdana, Meiryo, sans-serif;
-  }
-}
-
 body {
   color: #1d2129;
   font-size: 1.5rem;
   font-weight: 100;
-  // font-family: Roboto, "Noto Sans", Graphik LCG Web, Graphik Arabic Web Regular, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, Arial, "Lucida Grande", sans-serif;
+  font-family: Roboto, "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;;
   line-height: 1.8;
 }
 
