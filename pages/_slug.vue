@@ -46,6 +46,14 @@ export default {
   width: $width;
   margin: 50px auto;
 
+  h1 {
+    font-size: 4.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   .date {
     text-align: right;
   }
