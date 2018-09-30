@@ -64,13 +64,11 @@ module.exports = {
   css: [
     "normalize.css",
     "~/assets/css/main.scss",
-    { src: "vue-material/dist/vue-material.min.css", lang: "css" }
   ],
 
-  plugins: ["~/plugins/init.js", { src: "~/plugins/vue-material" }],
+  plugins: ["~/plugins/init.js"],
 
   build: {
-    vendor: ["vue-material"],
     extend: function (config) {
       config.node = {
         fs: "empty"

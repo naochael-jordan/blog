@@ -31,12 +31,16 @@ export default {
 @import "~/assets/css/variables.scss";
 
 section {
-  width: $width;
+  max-width: $width;
   margin: 50px auto;
 
   li {
     display: flex;
     align-items: center;
+  }
+
+  p {
+    margin: 0;
   }
 
   .date {

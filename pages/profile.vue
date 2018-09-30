@@ -2,9 +2,7 @@
   <section>
     <h1>Naochael Jordan</h1>
 
-    <md-avatar class="md-large">
-      <img src="~/assets/images/profile.jpg" alt="Naochael Jordan">
-    </md-avatar>
+    <img class="avatar" src="~/assets/images/profile.jpg" width="250" height="250" alt="Naochael Jordan">
 
     <h2>プロフィール</h2>
     <p>
@@ -65,7 +63,7 @@ export default {
 @import "~/assets/css/variables.scss";
 
 section {
-  width: $width;
+  max-width: $width;
   margin: 80px auto;
 }
 
@@ -87,12 +85,6 @@ p {
   padding: 0;
 }
 
-.md-large {
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
-}
-
 li {
   display: flex;
   align-items: center;
@@ -101,5 +93,9 @@ li {
   a:first-child {
     margin-right: 10px;
   }
+}
+
+.avatar {
+  border-radius: 50%;
 }
 </style>

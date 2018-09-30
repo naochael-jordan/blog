@@ -4,9 +4,7 @@
       <h2 v-if="!hideProfile">Author</h2>
 
       <div v-if="!hideProfile" class="box">
-        <md-avatar class="md-large">
-          <img src="~/assets/images/profile.jpg" alt="Naochael Jordan">
-        </md-avatar>
+        <img class="profile" width="200" height="200" src="~/assets/images/profile.jpg" alt="Naochael Jordan">
 
         <div class="info">
           <h3>Naochael Jordan</h3>
@@ -19,10 +17,16 @@
               <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">
                 <img src="~/assets/svg/twitter.svg" width="24" height="24" alt="Naochael Jordan Twitter">
               </a>
+              <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">
+                @NaochaelJ
+              </a>
             </li>
             <li>
               <a href="https://github.com/naochael-jordan" target="_blank" rel="noopener">
                 <img src="~/assets/images/github.png" width="24" height="24" alt="Naochael Jordan Github">
+              </a>
+              <a href="https://github.com/naochael-jordan" target="_blank" rel="noopener">
+                naochael-jordan
               </a>
             </li>
           </ul>
@@ -53,15 +57,13 @@ export default Vue.extend({
 @import "~/assets/css/variables.scss";
 
 footer {
-  // position: absolute;
-  // bottom: 0;
-  // width: 100%;
   padding: 10px 0;
   color: white;
+  font-size: 14px;
   background: #333;
 
   .container {
-    width: $width;
+    max-width: $width;
     margin: 0 auto;
   }
 
@@ -83,19 +85,27 @@ footer {
     margin-bottom: 20px;
   }
 
+  .profile {
+    border-radius: 50%;
+  }
+
   .info {
     flex: 1;
     margin-left: 20px;
 
     ul {
-      display: flex;
       margin: 0;
       padding: 0;
       list-style-type: none;
     }
 
     li {
-      margin-right: 10px;
+      display: flex;
+
+      a {
+        margin-right: 10px;
+        color: white;
+      }
     }
   }
 
