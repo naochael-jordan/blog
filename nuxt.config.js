@@ -20,6 +20,15 @@ const host =
   process.env.npm_package_config_nuxt_host ||
   "localhost";
 
+// 動的なroutesを返す
+function getRoutes() {
+  return fs
+    .readdirSync("./static")
+    .filter(i => i.match(/.md$/))
+    .map(f => f.replace(/.md$/, ""))
+    .map(f => `/${f}`);
+}
+
 module.exports = {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
@@ -81,11 +90,7 @@ module.exports = {
   },
 
   generate: {
-    routes: fs
-      .readdirSync("./static")
-      .filter(i => i.match(/.md$/))
-      .map(f => f.replace(/.md$/, ""))
-      .map(f => `/${f}`)
+    routes: getRoutes()
   },
 
   modules: [
@@ -97,7 +102,8 @@ module.exports = {
         id: "UA-125875531-1"
       }
     ],
-    "@nuxtjs/markdownit"
+    "@nuxtjs/markdownit",
+    "@nuxtjs/sitemap"
   ],
 
   markdownit: {
@@ -110,6 +116,25 @@ module.exports = {
       "markdown-it-meta",
       "markdown-it-highlightjs"
     ]
+  },
+
+  sitemap: {
+    path: "/sitemap.xml",
+    hostname: "https://naochael-jordan.github.io",
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: true, // Enable me when using nuxt generate
+    exclude: [],
+    routes: getRoutes()
+    // routes: [
+    //   "/page/1",
+    //   {
+    //     url: "/page/2",
+    //     changefreq: "daily",
+    //     priority: 1,
+    //     lastmodISO: "2017-06-30T13:30:00.000Z"
+    //   }
+    // ]
   },
 
   axios: {}

@@ -6,6 +6,7 @@
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/markdownit": "^1.2.1",
+    "@nuxtjs/sitemap": "^0.1.1",
     "date-fns": "^1.29.0",
     "front-matter": "^2.3.0",
     "markdown-it-attrs": "^2.3.1",
