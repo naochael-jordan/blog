@@ -18,16 +18,22 @@ export default {
   },
 
   created() {
+    console.log("this.$store.state.posts", this.$store.state.posts);
     const post = this.$store.state.posts.find(
       post => post.fileName === this.$route.path.replace("/", "")
     );
+    console.log("post", post);
     this.$store.commit("setPost", post);
+    console.log("this.$store.state.post 111", this.$store.state.post);
   },
 
   computed: {
     title: function() {
+      console.log("this.$store.state.post 222", this.$store.state.post);
       if (!this.$store.state.post) return "";
-
+      console.log("this.$store.state.post 333", this.$store.state.post);
+      console.log("this.$store.state.post.title", this.$store.state.post.title);
+      console.log("this.$store.state.post.date", this.$store.state.post.date);
       return this.$store.state.post.attributes.title;
     },
 
