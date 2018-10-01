@@ -62,5 +62,12 @@ export default {
   .contents {
     color: #4b4f56;
   }
+
+  /deep/ p code,
+  /deep/ ul code {
+    margin: 0 4px;
+    color: #e96900;
+    white-space: nowrap;
+  }
 }
 </style>

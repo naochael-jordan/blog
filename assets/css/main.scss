@@ -41,9 +41,10 @@
 html {
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: unset;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic",
+    YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
 }
-@media all and (-ms-high-contrast: none)  {
+@media all and (-ms-high-contrast: none) {
   html {
     font-family: Verdana, Meiryo, sans-serif;
   }
@@ -54,9 +55,8 @@ html {
   }
 }
 
-@media only screen and
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -76,10 +76,4 @@ a {
   &:hover {
     text-decoration: underline;
   }
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }

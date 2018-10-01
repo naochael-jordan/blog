@@ -64,12 +64,16 @@ module.exports = {
   css: [
     "normalize.css",
     "~/assets/css/main.scss",
+    {
+      src: "~/node_modules/highlight.js/styles/vs2015.css",
+      lang: "css"
+    }
   ],
 
   plugins: ["~/plugins/init.js"],
 
   build: {
-    extend: function (config) {
+    extend: function(config) {
       config.node = {
         fs: "empty"
       };
@@ -100,7 +104,12 @@ module.exports = {
     preset: "default",
     linkify: true,
     breaks: true,
-    use: ["markdown-it-container", "markdown-it-attrs", "markdown-it-meta"]
+    use: [
+      "markdown-it-container",
+      "markdown-it-attrs",
+      "markdown-it-meta",
+      "markdown-it-highlightjs"
+    ]
   },
 
   axios: {}
