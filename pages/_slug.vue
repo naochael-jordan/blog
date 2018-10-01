@@ -19,6 +19,7 @@ export default {
 
   created() {
     console.log("this.$store.state.posts", this.$store.state.posts);
+    console.log("this.$route.path", this.$route.path);
     const post = this.$store.state.posts.find(
       post => post.fileName === this.$route.path.replace("/", "")
     );
