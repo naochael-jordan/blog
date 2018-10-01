@@ -21,12 +21,16 @@ const host =
   "localhost";
 
 // 動的なroutesを返す
-function getRoutes() {
-  return fs
+function getRoutes(isSiteMap) {
+  const routes = fs
     .readdirSync("./static")
     .filter(i => i.match(/.md$/))
     .map(f => f.replace(/.md$/, ""))
     .map(f => `/${f}`);
+
+  if (isSiteMap) routes.map(r => `/blog${r}`); // サイトマップ生成の時は /blog を付ける
+
+  return routes;
 }
 
 module.exports = {
@@ -125,16 +129,7 @@ module.exports = {
     gzip: true,
     generate: true, // Enable me when using nuxt generate
     exclude: [],
-    routes: getRoutes()
-    // routes: [
-    //   "/page/1",
-    //   {
-    //     url: "/page/2",
-    //     changefreq: "daily",
-    //     priority: 1,
-    //     lastmodISO: "2017-06-30T13:30:00.000Z"
-    //   }
-    // ]
+    routes: getRoutes(true)
   },
 
   axios: {}
