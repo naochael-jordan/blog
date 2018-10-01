@@ -31,7 +31,7 @@ export default {
     },
 
     date: function() {
-      if (!this.post) return "";
+      if (!this.post) return new Date();
 
       return this.post.attributes.date;
     }
