@@ -21,16 +21,12 @@ const host =
   "localhost";
 
 // 動的なroutesを返す
-function getRoutes(isSiteMap) {
-  const routes = fs
+function getRoutes() {
+  return fs
     .readdirSync("./static")
     .filter(i => i.match(/.md$/))
     .map(f => f.replace(/.md$/, ""))
     .map(f => `/${f}`);
-
-  if (isSiteMap) routes.map(r => `/blog${r}`); // サイトマップ生成の時は /blog を付ける
-
-  return routes;
 }
 
 module.exports = {
@@ -124,12 +120,12 @@ module.exports = {
 
   sitemap: {
     path: "/sitemap.xml",
-    hostname: "https://naochael-jordan.github.io",
+    hostname: "https://naochael-jordan.github.io/blog",
     cacheTime: 1000 * 60 * 15,
     gzip: true,
     generate: true, // Enable me when using nuxt generate
     exclude: [],
-    routes: getRoutes(true)
+    routes: getRoutes()
   },
 
   axios: {}
