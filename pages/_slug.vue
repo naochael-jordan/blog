@@ -17,23 +17,20 @@ export default {
     };
   },
 
+  created() {
+    const post = this.$store.state.posts.find(
+      post => post.fileName === this.$route.path.replace("/", "")
+    );
+    this.$store.commit("setPost", post);
+  },
+
   computed: {
-    post: function() {
-      return this.$store.state.posts.find(
-        post => post.fileName === this.$route.path.replace("/", "")
-      );
-    },
-
     title: function() {
-      if (!this.post) return "";
-
-      return this.post.attributes.title;
+      return this.$store.state.post.attributes.title;
     },
 
     date: function() {
-      if (!this.post) return new Date();
-
-      return this.post.attributes.date;
+      return this.$store.state.post.attributes.date;
     }
   },
 

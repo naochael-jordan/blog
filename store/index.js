@@ -3,12 +3,22 @@ import Vuex from "vuex";
 const store = () =>
   new Vuex.Store({
     state: {
-      posts: []
+      posts: [],
+      post: {
+        attributes: {
+          title: "",
+          date: null
+        }
+      }
     },
 
     mutations: {
       setPosts(state, posts) {
         state.posts = posts;
+      },
+
+      setPost(state, post) {
+        state.post = post;
       }
     }
   });
