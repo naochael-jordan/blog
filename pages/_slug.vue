@@ -32,8 +32,14 @@ export default {
       console.log("this.$store.state.post 222", this.$store.state.post);
       if (!this.$store.state.post) return "";
       console.log("this.$store.state.post 333", this.$store.state.post);
-      console.log("this.$store.state.post.title", this.$store.state.post.title);
-      console.log("this.$store.state.post.date", this.$store.state.post.date);
+      console.log(
+        "this.$store.state.post.attributes.title",
+        this.$store.state.post.attributes.title
+      );
+      console.log(
+        "this.$store.state.post.attributes.date",
+        this.$store.state.post.attributes.date
+      );
       return this.$store.state.post.attributes.title;
     },
 
