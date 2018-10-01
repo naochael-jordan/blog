@@ -26,10 +26,14 @@ export default {
 
   computed: {
     title: function() {
+      if (!this.$store.state.post) return "";
+
       return this.$store.state.post.attributes.title;
     },
 
     date: function() {
+      if (!this.$store.state.post) return null;
+
       return this.$store.state.post.attributes.date;
     }
   },
@@ -67,7 +71,7 @@ export default {
   /deep/ p code,
   /deep/ ul code {
     margin: 0 4px;
-    color: #e96900;
+    color: #ca454e;
     white-space: nowrap;
   }
 }
