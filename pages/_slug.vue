@@ -25,10 +25,14 @@ export default {
     },
 
     title: function() {
+      if (!this.post) return "";
+
       return this.post.attributes.title;
     },
 
     date: function() {
+      if (!this.post) return "";
+
       return this.post.attributes.date;
     }
   },
