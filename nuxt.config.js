@@ -135,7 +135,7 @@ module.exports = {
     {
       path: "/feed.xml", // The route to your feed.
       // async create(feed) {}, // The create function (see below)
-      create = async feed => {
+      create = feed => {
         feed.options = {
           title: 'Naochael Jordan Blog',
           link: 'https://naochael-jordan.github.io/blog/feed.xml',
