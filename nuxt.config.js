@@ -1,4 +1,5 @@
 const fs = require("fs");
+const fm = require('front-matter');
 const parseArgs = require("minimist");
 const argv = parseArgs(process.argv.slice(2), {
   alias: {
@@ -134,6 +135,45 @@ module.exports = {
     {
       path: "/feed.xml", // The route to your feed.
       // async create(feed) {}, // The create function (see below)
+      create = async feed => {
+        feed.options = {
+          title: 'Naochael Jordan Blog',
+          link: 'https://naochael-jordan.github.io/blog/feed.xml',
+          description: '普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。Nuxt, ReactNative, Electron, Vuex, Redux辺りをよく触ってます。',
+        }
+
+        feed.addItem({
+          title: 'たいとる',
+          id: 'https://naochael-jordan.github.io/blog/',
+          link: 'https://naochael-jordan.github.io/blog/',
+          description: 'ですくりぷしょん',
+          content: 'こんてんつ'
+        })
+
+        // const files = fs.readdirSync("./static");
+        // const posts = files.filter(file => file.match(/.md$/)).map(file => {
+        //   let post = fm(fs.readFileSync(`static/${file}`, "utf8"));
+        //   post.fileName = file.replace(/.md$/, "");
+        //   return post;
+        // });
+        // posts.forEach(post => {
+        //   feed.addItem({
+        //     title: post.attributes.title,
+        //     id: post.url,
+        //     link: post.url,
+        //     description: post.description,
+        //     content: post.content
+        //   })
+        // })
+
+        feed.addCategory('Nuxt.js')
+
+        feed.addContributor({
+          name: 'Naochael Jordan',
+          email: 'naochael.jordan@gmail.com',
+          link: 'https://naochael-jordan.github.io/blog/'
+        })
+      },
       cacheTime: 1000 * 60 * 15, // How long should the feed be cached
       type: "rss2" // Can be: rss2, atom1, json1
     }
