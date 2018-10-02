@@ -1,5 +1,4 @@
 const fs = require("fs");
-const fm = require("front-matter");
 const parseArgs = require("minimist");
 const argv = parseArgs(process.argv.slice(2), {
   alias: {
@@ -104,8 +103,7 @@ module.exports = {
       }
     ],
     "@nuxtjs/markdownit",
-    "@nuxtjs/sitemap",
-    "@nuxtjs/feed"
+    "@nuxtjs/sitemap"
   ],
 
   markdownit: {
@@ -129,61 +127,6 @@ module.exports = {
     exclude: [],
     routes: getRoutes()
   },
-
-  feed: [
-    {
-      path: "/feed.xml", // The route to your feed.
-      async create(feed) {
-        feed.options = {
-          title: "Naochael Jordan Blog",
-          link: "https://naochael-jordan.github.io/blog/feed.xml",
-          description:
-            "普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。Nuxt, ReactNative, Electron, Vuex, Redux辺りをよく触ってます。"
-        };
-
-        feed.addItem({
-          title: "たいとる",
-          id: "https://naochael-jordan.github.io/blog/",
-          link: "https://naochael-jordan.github.io/blog/",
-          description: "ですくりぷしょん",
-          content: "こんてんつ"
-        });
-
-        // sourceFileArray.forEach(item => {
-        //   const summary =
-        //     fileMap[
-        //       item.replace(".md", ".json").replace("/markdown/", "/json/")
-        //     ];
-        //   const note = require(path.resolve(
-        //     __dirname,
-        //     item.replace("/markdown/", "/json/").replace(".md", ".json")
-        //   ));
-        //   const post = {
-        //     title: summary.title,
-        //     url: "https://isoppp.com" + sourceFileNameToUrl(item),
-        //     description: summary.preview,
-        //     content: note.bodyHtml
-        //   };
-
-        //   feed.addItem({
-        //     title: post.title,
-        //     id: post.url,
-        //     link: post.url,
-        //     description: post.description,
-        //     content: post.content
-        //   });
-        // });
-
-        feed.addContributor({
-          name: "NaochaelJordan",
-          email: "naochael.jordan@gmail.com",
-          link: "https://naochael-jordan.github.io/blog"
-        });
-      }, // The create function (see below)
-      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
-      type: "rss2" // Can be: rss2, atom1, json1
-    }
-  ],
 
   axios: {}
 };
