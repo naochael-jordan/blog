@@ -25,6 +25,14 @@ export default {
           hid: "description",
           name: "description",
           content: this.body
+        },
+        {
+          name: "og:title",
+          content: this.title
+        },
+        {
+          name: "og:description",
+          content: this.body
         }
       ]
     };
