@@ -31,15 +31,15 @@ export default {
           content: "summary"
         },
         {
-          name: "twitter:title",
+          name: "og:title",
           content: this.title
         },
         {
-          name: "twitter:description",
+          name: "og:description",
           content: this.body
         },
         {
-          name: "twitter:image",
+          name: "og:image",
           content:
             "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
         }
