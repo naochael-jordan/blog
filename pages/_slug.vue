@@ -41,7 +41,7 @@ export default {
         {
           name: "og:image",
           content:
-            "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
+            "https://naochael-jordan.github.io/blog/_nuxt/img/profile.d4b7099.jpg"
         }
       ]
     };
