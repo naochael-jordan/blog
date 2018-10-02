@@ -27,6 +27,10 @@ export default {
           content: this.body
         },
         {
+          name: "twitter:card",
+          content: "summary"
+        },
+        {
           name: "og:title",
           content: this.title
         },
