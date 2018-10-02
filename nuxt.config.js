@@ -103,7 +103,8 @@ module.exports = {
       }
     ],
     "@nuxtjs/markdownit",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+    "@nuxtjs/feed"
   ],
 
   markdownit: {
@@ -127,6 +128,16 @@ module.exports = {
     exclude: [],
     routes: getRoutes()
   },
+
+  feed: [
+    // A default feed configuration object
+    {
+      path: "/feed.xml", // The route to your feed.
+      // async create(feed) {}, // The create function (see below)
+      cacheTime: 1000 * 60 * 15, // How long should the feed be cached
+      type: "rss2" // Can be: rss2, atom1, json1
+    }
+  ],
 
   axios: {}
 };
