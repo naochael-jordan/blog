@@ -105,4 +105,27 @@ export default {
     white-space: nowrap;
   }
 }
+
+// for SP
+@media (max-width: $width + (10px * 2)) {
+  .container {
+    margin: 20px auto;
+    padding: 0 10px;
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+
+    .date {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .contents {
+      line-height: 1.6;
+    }
+  }
+}
 </style>

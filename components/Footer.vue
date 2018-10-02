@@ -101,6 +101,8 @@ footer {
 
     li {
       display: flex;
+      align-items: center;
+      margin-bottom: 10px;
 
       a {
         margin-right: 10px;
@@ -112,6 +114,53 @@ footer {
   address {
     margin: 0;
     text-align: center;
+  }
+}
+
+// for SP
+@media (max-width: $width + (10px * 2)) {
+  footer {
+    padding: 10px;
+
+    h2 {
+      margin: 10px 0 10px;
+      padding: 0;
+      font-size: 1.8rem;
+      line-height: 1.4;
+    }
+
+    .box {
+      align-items: flex-start;
+      margin: 0;
+    }
+
+    .profile {
+      width: 100px;
+      height: 100px;
+    }
+
+    .info {
+      margin-left: 10px;
+      line-height: 1.4;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.6rem;
+    }
+
+    p {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+
+    ul {
+      font-size: 1.2rem;
+    }
+
+    address {
+      line-height: 1.6;
+    }
   }
 }
 </style>

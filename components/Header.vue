@@ -30,6 +30,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import "~/assets/css/variables.scss";
+
 header {
   display: flex;
   align-items: center;
@@ -47,6 +49,7 @@ header {
     margin: 0;
     font-size: 1.6rem;
     font-weight: normal;
+    line-height: 1.2;
 
     a:hover {
       text-decoration: none;
@@ -60,12 +63,28 @@ header {
   ul {
     display: flex;
     margin: 0;
+    padding: 0;
     font-size: 1.4rem;
     list-style-type: none;
   }
 
   li {
     margin-left: 20px;
+  }
+}
+
+// for SP
+@media (max-width: $width + (10px * 2)) {
+  header {
+    h1 {
+      span {
+        display: block;
+      }
+    }
+
+    li {
+      margin-left: 8px;
+    }
   }
 }
 </style>

@@ -33,6 +33,7 @@ export default {
 section {
   max-width: $width;
   margin: 50px auto;
+  padding: 0 10px;
 
   li {
     display: flex;
@@ -49,6 +50,38 @@ section {
 
   .title {
     font-size: 2rem;
+  }
+}
+
+// for SP
+@media (max-width: $width + (10px * 2)) {
+  section {
+    margin: 20px auto;
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 2rem;
+      line-height: 1.4;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 10px;
+    }
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      font-size: 1.3rem;
+    }
+
+    .title {
+      font-size: 1.6rem;
+      line-height: 1.4;
+    }
   }
 }
 </style>

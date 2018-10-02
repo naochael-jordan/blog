@@ -98,4 +98,39 @@ li {
 .avatar {
   border-radius: 50%;
 }
+
+// for SP
+@media (max-width: $width + (10px * 2)) {
+  section {
+    margin: 20px auto;
+    padding: 0 10px;
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 2rem;
+      line-height: 1.6;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+    }
+
+    h2 {
+      margin: 20px 0 10px;
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      font-size: 1.4rem;
+    }
+  }
+}
 </style>
