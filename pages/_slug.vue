@@ -2,7 +2,7 @@
   <div class="container">
     <h1>{{ title }}</h1>
     <p class="date">{{ format(date, 'YYYY-MM-DD') }}</p>
-    <div v-html="content" class="contents"></div>
+    <div v-html="htmlContent" class="contents"></div>
   </div>
 </template>
 
@@ -11,9 +11,22 @@ import { format } from "date-fns";
 
 export default {
   async asyncData({ params }) {
-    const content = await import(`~/static/${params.slug}.md`);
+    const htmlContent = await import(`~/static/${params.slug}.md`);
     return {
-      content
+      htmlContent
+    };
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.body
+        }
+      ]
     };
   },
 
@@ -31,6 +44,10 @@ export default {
 
     date: function() {
       return this.$store.state.post.attributes.date;
+    },
+
+    body: function() {
+      return this.$store.state.post.body.replace(/\r?\n/g, "");
     }
   },
 

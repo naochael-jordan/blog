@@ -110,6 +110,7 @@ module.exports = {
     preset: "default",
     linkify: true,
     breaks: true,
+    // injected: true,
     use: [
       "markdown-it-container",
       "markdown-it-attrs",
