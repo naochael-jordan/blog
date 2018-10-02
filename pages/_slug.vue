@@ -37,6 +37,11 @@ export default {
         {
           name: "og:description",
           content: this.body
+        },
+        {
+          name: "og:image",
+          content:
+            "http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg"
         }
       ]
     };
