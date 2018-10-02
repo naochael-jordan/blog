@@ -8,7 +8,10 @@ const store = () =>
         attributes: {
           title: "",
           date: null
-        }
+        },
+        body: "",
+        fileName: "",
+        frontmatter: ""
       }
     },
 
