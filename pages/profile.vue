@@ -1,6 +1,7 @@
 <template>
   <section>
     <h1>Naochael Jordan</h1>
+    <p class="name-kana">ナオケル ジョーダン</p>
 
     <img class="avatar" src="~/assets/images/profile.jpg" width="250" height="250" alt="Naochael Jordan">
 
@@ -68,9 +69,13 @@ section {
 }
 
 h1 {
-  margin: 0 0 50px;
+  margin: 0 0 10px;
   font-size: 6rem;
   line-height: 6rem;
+}
+
+.name-kana {
+  margin: 0 0 50px;
 }
 
 h2 {
@@ -82,6 +87,10 @@ h2 {
 
 p {
   margin: 0;
+  padding: 0;
+}
+
+ul {
   padding: 0;
 }
 
@@ -106,9 +115,14 @@ li {
     padding: 0 10px;
 
     h1 {
-      margin: 0 0 20px;
+      margin: 0 0 0;
       font-size: 2rem;
       line-height: 1.6;
+    }
+
+    .name-kana {
+      margin: 0 0 20px;
+      font-size: 1.2rem;
     }
 
     .avatar {

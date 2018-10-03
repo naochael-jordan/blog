@@ -35,6 +35,10 @@ section {
   margin: 50px auto;
   padding: 0 10px;
 
+  ul {
+    padding: 0;
+  }
+
   li {
     display: flex;
     align-items: center;
@@ -56,17 +60,12 @@ section {
 // for SP
 @media (max-width: $width + (10px * 2)) {
   section {
-    margin: 20px auto;
+    margin: 20px auto 30px;
 
     h1 {
       margin: 0 0 20px;
       font-size: 2rem;
       line-height: 1.4;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 10px;
     }
 
     li {
@@ -75,7 +74,7 @@ section {
     }
 
     .date {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
     }
 
     .title {

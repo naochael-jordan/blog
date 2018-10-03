@@ -10,6 +10,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.8;
   color: #1d2129;
+  overflow-wrap: break-word;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -23,6 +24,7 @@ body {
 a {
   color: #365899;
   text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   &:hover {
     text-decoration: underline;
