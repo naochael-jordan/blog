@@ -31,7 +31,7 @@ export default class Slug extends Vue {
   format = format;
 
   async asyncData({ params }) {
-    const htmlContent = await require(`~/static/${params.slug}.md`);
+    const htmlContent = await require(`~/static/markdown/${params.slug}.md`);
     return {
       htmlContent
     };
