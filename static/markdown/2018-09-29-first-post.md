@@ -3,8 +3,7 @@ title: ブログ始めました(Nuxt.js + Markdown)
 date: 2018-09-29
 ---
 
-<!-- <img src="./images/2018-09-29/heading.png" width="880" height="300"> -->
-![](./images/2018-09-29/heading.png)
+<img src="./images/2018-09-29/heading.png" width="880" height="300">
 
 `Nuxt`の勉強がてら、`Nuxt + Markdown`でブログ作ってたら思った以上に時間かかった。。
 今度、その辺りの記事書けたらなと思います。
