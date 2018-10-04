@@ -53,15 +53,6 @@
   </section>
 </template>
 
-
-<script lang="ts">
-import { Vue, Component } from "nuxt-property-decorator";
-
-@Component({})
-export default class Profile extends Vue {}
-</script>
-
-
 <style lang="scss" scoped>
 @import "~/assets/css/variables.scss";
 

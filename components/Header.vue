@@ -28,12 +28,6 @@
   </header>
 </template>
 
-<script lang="ts">
-import { Vue } from "nuxt-property-decorator";
-
-export default class Header extends Vue {}
-</script>
-
 <style lang="scss" scoped>
 @import "~/assets/css/variables.scss";
 
@@ -61,6 +55,7 @@ header {
     }
 
     span {
+      margin-right: 4px;
       font-weight: bold;
     }
   }
