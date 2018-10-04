@@ -1,6 +1,6 @@
 # blog
 
-> Nuxt.js + TypeScript
+> Nuxt.js + TypeScript + Markdown
 
 ## Build Setup
 

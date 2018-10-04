@@ -12,20 +12,18 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import { Vue, Component } from "nuxt-property-decorator";
 import { format } from "date-fns";
 
-export default {
-  computed: {
-    posts() {
-      return this.$store.state.posts;
-    }
-  },
+@Component({})
+export default class Index extends Vue {
+  format = format;
 
-  methods: {
-    format
+  get posts() {
+    return this.$store.state.posts;
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 @import "~/assets/css/variables.scss";

@@ -22,16 +22,20 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { Vue, Component } from "nuxt-property-decorator";
 import { format } from "date-fns";
 
-export default {
+@Component({})
+export default class Slug extends Vue {
+  format = format;
+
   async asyncData({ params }) {
-    const htmlContent = await import(`~/static/${params.slug}.md`);
+    const htmlContent = await require(`~/static/${params.slug}.md`);
     return {
       htmlContent
     };
-  },
+  }
 
   head() {
     return {
@@ -61,33 +65,27 @@ export default {
         }
       ]
     };
-  },
+  }
 
   created() {
     const post = this.$store.state.posts.find(
       post => post.fileName === this.$route.path.replace(/\//g, "")
     );
     this.$store.commit("setPost", post);
-  },
-
-  computed: {
-    title: function() {
-      return this.$store.state.post.attributes.title;
-    },
-
-    date: function() {
-      return this.$store.state.post.attributes.date;
-    },
-
-    body: function() {
-      return this.$store.state.post.body.replace(/\r?\n/g, "");
-    }
-  },
-
-  methods: {
-    format
   }
-};
+
+  get title() {
+    return this.$store.state.post.attributes.title;
+  }
+
+  get date() {
+    return this.$store.state.post.attributes.date;
+  }
+
+  get body() {
+    return this.$store.state.post.body.replace(/\r?\n/g, "");
+  }
+}
 </script>
 
 <style lang="scss" scoped>
