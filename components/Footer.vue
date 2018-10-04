@@ -1,9 +1,9 @@
 <template>
   <footer>
     <section class="container">
-      <h2 v-if="!hideProfile">Author</h2>
+      <h2 v-if="showProfile">Author</h2>
 
-      <div v-if="!hideProfile" class="box">
+      <div v-if="showProfile" class="box">
         <img class="profile" width="200" height="200" src="~/assets/images/profile.jpg" alt="Naochael Jordan">
 
         <div class="info">
@@ -40,16 +40,19 @@
   </footer>
 </template>
 
+
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
+import { Vue, Component } from "nuxt-property-decorator";
+
+@Component({
   props: {
-    hideProfile: {
+    showProfile: {
       type: Boolean,
-      default: false
+      default: true
     }
   }
-});
+})
+export default class Header extends Vue {}
 </script>
 
 

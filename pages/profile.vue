@@ -7,7 +7,7 @@
 
     <h2>プロフィール</h2>
     <p>
-      普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。<br>
+      ハワイ好きのフロントエンドエンジニア。Webサービスとかアプリ開発してます。<br>
       ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りはほぼ理解した && よく触ってます。<br>
     </p>
 
@@ -53,10 +53,8 @@
   </section>
 </template>
 
+
 <script lang="ts">
-export default {
-  layout: "profile"
-};
 </script>
 
 

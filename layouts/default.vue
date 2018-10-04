@@ -6,12 +6,14 @@
       <nuxt/>
     </div>
 
-    <Footer />
+    <Footer :showProfile="showProfile" />
   </div>
 </template>
 
+
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue, Watch } from "nuxt-property-decorator";
+import { Route } from "vue-router";
 
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
@@ -22,8 +24,25 @@ import Footer from "~/components/Footer.vue";
     Footer
   }
 })
-export default class Default extends Vue {}
+export default class Default extends Vue {
+  $route: Route;
+  showProfile = true;
+
+  @Watch("$route")
+  watchRoute() {
+    this.changeShowProfile();
+  }
+
+  created() {
+    this.changeShowProfile();
+  }
+
+  changeShowProfile() {
+    this.showProfile = this.$route.name === "profile" ? false : true;
+  }
+}
 </script>
+
 
 <style lang="scss" scoped>
 </style>

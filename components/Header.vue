@@ -2,8 +2,7 @@
   <header>
     <h1>
       <nuxt-link to="/">
-        <span>Naochael</span>
-        Jordan
+        <span>Naochael</span>Jordan
       </nuxt-link>
     </h1>
     <nav>
@@ -28,6 +27,12 @@
     </nav>
   </header>
 </template>
+
+<script lang="ts">
+import { Vue } from "nuxt-property-decorator";
+
+export default class Header extends Vue {}
+</script>
 
 <style lang="scss" scoped>
 @import "~/assets/css/variables.scss";
