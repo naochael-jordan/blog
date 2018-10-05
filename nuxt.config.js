@@ -23,7 +23,7 @@ const host =
 // 動的なroutesを返す
 function getRoutes() {
   return fs
-    .readdirSync("./static/markdown")
+    .readdirSync("./markdown")
     .filter(i => i.match(/.md$/))
     .map(f => f.replace(/.md$/, ""))
     .map(f => `/${f}`);
