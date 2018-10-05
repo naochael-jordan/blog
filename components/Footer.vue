@@ -134,7 +134,6 @@ footer {
 
     .box {
       align-items: flex-start;
-      margin: 0;
     }
 
     .profile {
@@ -143,7 +142,7 @@ footer {
     }
 
     .info {
-      margin-left: 10px;
+      margin-left: 16px;
       line-height: 1.4;
     }
 

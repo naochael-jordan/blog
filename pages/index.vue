@@ -34,6 +34,7 @@ section {
   padding: 0 10px;
 
   ul {
+    margin: 0 0 0 10px;
     padding: 0;
   }
 
@@ -69,7 +70,7 @@ section {
 
     li {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .date {

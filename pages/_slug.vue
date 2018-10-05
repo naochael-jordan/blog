@@ -97,11 +97,8 @@ export default class Slug extends Vue {
 
   h1 {
     font-size: 4.2rem;
+    line-height: 5.2rem;
     font-weight: 600;
-  }
-
-  h2 {
-    font-size: 2rem;
   }
 
   .date {
@@ -109,7 +106,7 @@ export default class Slug extends Vue {
   }
 
   .contents {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: #4b4f56;
 
     /deep/ h1 {
@@ -122,8 +119,16 @@ export default class Slug extends Vue {
 
     /deep/ h2 {
       margin: 40px 0 0;
-      font-size: 2.2rem;
-      line-height: 2.2rem;
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    /deep/ p {
+      margin: 10px 0 4px;
+    }
+
+    /deep/ a {
+      text-decoration: underline;
     }
 
     /deep/ p code,
@@ -148,12 +153,12 @@ export default class Slug extends Vue {
 @media (max-width: $width + (10px * 2)) {
   .container {
     margin: 20px auto;
-    padding: 0 10px;
+    padding: 0 16px;
 
     h1 {
       margin: 0 0 10px;
-      font-size: 2rem;
-      line-height: 1.6;
+      font-size: 2.2rem;
+      line-height: 3rem;
     }
 
     .date {
@@ -163,6 +168,33 @@ export default class Slug extends Vue {
 
     .contents {
       line-height: 1.6;
+
+      /deep/ h1 {
+        margin: 40px 0 0;
+        padding-bottom: 6px;
+        font-size: 2rem;
+        line-height: 3rem;
+        border-bottom: 1px solid #efefef;
+      }
+
+      /deep/ h2 {
+        margin: 30px 0 0;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+      }
+
+      /deep/ p {
+        margin-top: 8px;
+      }
+
+      /deep/ ul {
+        margin-top: 6px;
+        padding-left: 30px;
+      }
+
+      /deep/ li {
+        margin-bottom: 4px;
+      }
     }
   }
 }

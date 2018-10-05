@@ -7,8 +7,8 @@
 
     <h2>プロフィール</h2>
     <p>
-      ハワイ好きのフロントエンドエンジニア。Webサービスとかアプリ開発してます。<br>
-      ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りはほぼ理解した && よく触ってます。<br>
+      フロントエンドエンジニア。Webサービスとかアプリ開発してます。<br>
+      ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りをガリガリ触ってます。<br>
     </p>
 
     <h2>好きなこと</h2>
@@ -20,10 +20,11 @@
       <br>
       その他には、<br>
       ・バスケットボール<br>
+      ・マンガ(カイジとか)
       ・ゲーム(スマブラ、ウイイレとか)<br>
       ・映画(インターステラーとか)<br>
       ・ビールとかBBQ<br>
-      とかが大好きです。
+      が好きです。
     </p>
 
     <h2>SNS</h2>
@@ -124,7 +125,7 @@ li {
     }
 
     h2 {
-      margin: 20px 0 10px;
+      margin: 30px 0 10px;
       font-size: 1.8rem;
     }
 
