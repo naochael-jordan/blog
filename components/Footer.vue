@@ -11,6 +11,7 @@
           <p>
             普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。<br>
             Nuxt, ReactNative, Electron, Vuex, Redux辺りをよく触ってます。
+            <nuxt-link to="/profile" class="more">...もっと見る</nuxt-link>
           </p>
           <ul>
             <li>
@@ -97,7 +98,7 @@ footer {
     margin-left: 20px;
 
     ul {
-      margin: 0;
+      margin: 20px 0 0;
       padding: 0;
       list-style-type: none;
     }
@@ -111,6 +112,12 @@ footer {
         margin-right: 10px;
         color: white;
       }
+    }
+
+    .more {
+      margin-left: 4px;
+      color: white;
+      text-decoration: underline;
     }
   }
 
