@@ -11,14 +11,15 @@
       ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りをガリガリ触ってます。<br>
     </p>
 
-    <h2>好きなこと</h2>
+    <h2>好きなもの</h2>
     <p>
-      ・日曜日のサンデーモーニングからワイドナショーの一連の流れ<br>
-      ・カイジ 「柿ピー1日半欠けら」の<a href="https://youtu.be/B28ufV4ojkQ" target="_blank" rel="noopener">シーン</a><br>
+      ・日曜日のサンデーモーニングからワイドナショーの流れ<br>
+      ・カイジ 「<a href="https://youtu.be/B28ufV4ojkQ" target="_blank" rel="noopener">柿ピー1日半欠けら</a>」になるシーン<br>
+      ・Perfumeの「<a href="https://youtu.be/CYL3DnyA4e0" target="_blank" rel="noopener">Sweet Refrain</a>」<br>
       <!-- ・マネーの虎 <a href="https://www.youtube.com/watch?v=gJ4Vh1iq7Bw" target="_blank" rel="noopener">うどん屋の回</a><br> -->
       ・マイケルジョーダン<br>
       ・ゲーム スマブラ、ウイイレ<br>
-      ・映画 インターステラー、インセプション<br>
+      ・映画 インターステラー、インセプション、ソーシャルネットワーク<br>
       <br>
       仕事の空き時間でWebサービス、アプリ開発してます。<br>
       そっちで生計立てる +α の生活送る、を目標にやってます。<br>

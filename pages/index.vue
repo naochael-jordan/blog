@@ -30,7 +30,7 @@ export default class Index extends Vue {
 
 section {
   max-width: $width;
-  margin: 50px auto;
+  margin: 50px auto 70px;
   padding: 0 10px;
 
   ul {
