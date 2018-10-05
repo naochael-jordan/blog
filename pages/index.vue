@@ -40,6 +40,7 @@ section {
   li {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   p {

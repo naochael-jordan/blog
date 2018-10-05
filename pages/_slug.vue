@@ -111,13 +111,27 @@ export default class Slug extends Vue {
   .contents {
     margin-bottom: 20px;
     color: #4b4f56;
-  }
 
-  /deep/ p code,
-  /deep/ ul code {
-    margin: 0 4px;
-    color: #ca454e;
-    white-space: nowrap;
+    /deep/ h1 {
+      margin: 60px 0 0;
+      padding-bottom: 10px;
+      font-size: 2.6rem;
+      line-height: 2.6rem;
+      border-bottom: 1px solid #efefef;
+    }
+
+    /deep/ h2 {
+      margin: 40px 0 0;
+      font-size: 2.2rem;
+      line-height: 2.2rem;
+    }
+
+    /deep/ p code,
+    /deep/ ul code {
+      margin: 0 4px;
+      color: #ca454e;
+      white-space: nowrap;
+    }
   }
 
   .sns {
