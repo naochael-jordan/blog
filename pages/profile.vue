@@ -15,7 +15,7 @@
     <p>
       ・日曜日のサンデーモーニングからワイドナショーの流れ<br>
       ・カイジ 「<a href="https://youtu.be/B28ufV4ojkQ" target="_blank" rel="noopener">柿ピー1日半欠けら</a>」になるシーン<br>
-      ・Perfumeの「<a href="https://youtu.be/CYL3DnyA4e0" target="_blank" rel="noopener">Sweet Refrain</a>」<br>
+      ・Perfumeの「<a href="https://youtu.be/CYL3DnyA4e0" target="_blank" rel="noopener">Sweet Refrain</a>」 ... テンポ良くて作業用BGMとしてもGood!<br>
       <!-- ・マネーの虎 <a href="https://www.youtube.com/watch?v=gJ4Vh1iq7Bw" target="_blank" rel="noopener">うどん屋の回</a><br> -->
       ・マイケルジョーダン<br>
       ・ゲーム スマブラ、ウイイレ<br>
