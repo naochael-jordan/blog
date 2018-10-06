@@ -60,8 +60,7 @@ export default class Slug extends Vue {
         },
         {
           name: "og:image",
-          content:
-            "https://naochael-jordan.github.io/blog/_nuxt/img/profile.d4b7099.jpg"
+          content: "./images/profile.png"
         }
       ]
     };
