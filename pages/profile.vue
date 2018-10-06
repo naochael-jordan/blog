@@ -3,7 +3,7 @@
     <h1>Naochael Jordan</h1>
     <p class="name-kana">ナオケル ジョーダン</p>
 
-    <img class="avatar" src="~/assets/images/profile.jpg" width="250" height="250" alt="Naochael Jordan">
+    <img class="avatar" src="~/assets/images/profile.png" width="250" height="250" alt="Naochael Jordan">
 
     <h2>プロフィール</h2>
     <p>
