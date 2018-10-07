@@ -109,7 +109,7 @@ export default class Slug extends Vue {
     color: #4b4f56;
 
     /deep/ h1 {
-      margin: 60px 0 0;
+      margin: 60px 0 10px;
       padding-bottom: 10px;
       font-size: 2.6rem;
       line-height: 2.6rem;
@@ -123,7 +123,7 @@ export default class Slug extends Vue {
     }
 
     /deep/ p {
-      margin: 10px 0 4px;
+      margin: 20px 0 4px;
     }
 
     /deep/ a {
