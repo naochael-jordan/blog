@@ -30,6 +30,14 @@
                 naochael-jordan
               </a>
             </li>
+            <li>
+              <a href="https://www.instagram.com/naochael.jordan/" target="_blank" rel="noopener">
+                <img src="~/assets/svg/instagram.svg" width="24" height="24" alt="Naochael Jordan Github">
+              </a>
+              <a href="https://www.instagram.com/naochael.jordan/" target="_blank" rel="noopener">
+                naochael.jordan
+              </a>
+            </li>
           </ul>
         </div>
       </div>
