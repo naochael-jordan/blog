@@ -193,6 +193,10 @@ export default class Slug extends Vue {
       /deep/ li {
         margin-bottom: 4px;
       }
+
+      /deep/ .hljs {
+        word-wrap: normal;
+      }
     }
   }
 }
