@@ -195,7 +195,8 @@ export default class Slug extends Vue {
       }
 
       /deep/ .hljs {
-        word-wrap: normal;
+        white-space: pre;
+        overflow-x: auto;
       }
     }
   }
