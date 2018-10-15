@@ -3,11 +3,10 @@ title: highlight.jsのソースコードを改行させないCSS
 date: 2018-10-16
 ---
 
-このブログは、<a href="https://highlightjs.org/" target="_blank">hightlight.js</a>を使ってソースコードのハイライトを表示しているけど、デフォルトだと改行するようになっていて、改行させたくないなぁと思ってた。そんな時のCSS。
+このブログは、<a href="https://highlightjs.org/" target="_blank">hightlight.js</a>を使ってソースコードのハイライト表示をしているけど、デフォルトだと横幅を超えると改行されるようになっていて、これを改行させずにスクロールして表示するようにしたいなぁと思ってた。そんな時のCSS。
 
 ``` css
-pre,
-code {
+pre {
   overflow: auto;
   word-wrap: normal;
   white-space: pre;

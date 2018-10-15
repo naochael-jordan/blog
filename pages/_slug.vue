@@ -198,8 +198,7 @@ export default class Slug extends Vue {
         margin-bottom: 4px;
       }
 
-      /deep/ pre,
-      /deep/ code {
+      /deep/ pre {
         overflow: auto;
         word-wrap: normal;
         white-space: pre;
