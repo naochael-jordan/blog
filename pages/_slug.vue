@@ -194,9 +194,20 @@ export default class Slug extends Vue {
         margin-bottom: 4px;
       }
 
-      /deep/ .hljs {
+      /deep/ pre,
+      /deep/ code {
         white-space: pre;
-        overflow-x: auto;
+        overflow-x: scroll;
+      }
+
+      /deep/ .hljs {
+        display: inline-block;
+        overflow-x: scroll;
+        padding: 0.5em;
+        padding-right: 100%;
+        background: #002b36;
+        color: #839496;
+        -webkit-text-size-adjust: none;
       }
     }
   }
