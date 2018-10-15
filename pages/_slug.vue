@@ -134,7 +134,6 @@ export default class Slug extends Vue {
     /deep/ ul code {
       margin: 0 4px;
       color: #ca454e;
-      white-space: nowrap;
     }
   }
 
@@ -183,7 +182,7 @@ export default class Slug extends Vue {
       }
 
       /deep/ p {
-        margin-top: 8px;
+        margin-top: 12px;
       }
 
       /deep/ ul {
