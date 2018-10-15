@@ -207,8 +207,13 @@ export default class Slug extends Vue {
         overflow-scrolling: touch;
       }
 
+      /deep/ pre {
+        margin: 12px -16px;
+      }
+
       /deep/ .hljs {
         -webkit-text-size-adjust: none;
+        background-color: #1e1e1e;
       }
     }
   }
