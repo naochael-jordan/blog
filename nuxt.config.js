@@ -58,6 +58,10 @@ module.exports = {
         rel: "icon",
         type: "image/x-icon",
         href: "/blog/favicon.ico"
+      },
+      {
+        rel: "apple-touch-icon",
+        href: "/blog/apple-touch-icon-iphone.png"
       }
     ]
   },
