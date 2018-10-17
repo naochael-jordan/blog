@@ -8,7 +8,7 @@
     <h2>プロフィール</h2>
     <p>
       フロントエンドエンジニア。Webサービスとかアプリ開発してます。<br>
-      ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りをガリガリ触ってます。<br>
+      ReactNative, Electron, Nuxt.js, Vuex, Redux, Rails辺りで開発してます。<br>
     </p>
 
     <h2>好きなもの</h2>
@@ -19,7 +19,7 @@
       ・Perfumeの「<a href="https://youtu.be/CYL3DnyA4e0" target="_blank" rel="noopener">Sweet Refrain</a>」 ... テンポ良くて作業用BGMとしてもGood!<br>
       ・日曜日のサンデーモーニングからワイドナショーの流れ<br>
       ・カイジ 「<a href="https://youtu.be/B28ufV4ojkQ" target="_blank" rel="noopener">柿ピー1日半欠けら</a>」になるシーン<br>
-      ・マネーの虎 <a href="https://www.youtube.com/watch?v=gJ4Vh1iq7Bw" target="_blank" rel="noopener">うどん屋の回</a><br>
+      <!-- ・マネーの虎 <a href="https://www.youtube.com/watch?v=gJ4Vh1iq7Bw" target="_blank" rel="noopener">うどん屋の回</a><br> -->
       <br>
       仕事の空き時間でWebサービス、アプリ開発してます。<br>
       それで生計立てる +α の生活をする、ってところは必ず達成させる。<br>
