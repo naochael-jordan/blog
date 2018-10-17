@@ -13,16 +13,16 @@
 
     <h2>好きなもの</h2>
     <p>
+      ・マイケルジョーダン<br>
+      ・映画 インターステラー、インセプション、ソーシャルネットワーク<br>
+      ・ゲーム スマブラ、ウイイレ<br>
+      ・Perfumeの「<a href="https://youtu.be/CYL3DnyA4e0" target="_blank" rel="noopener">Sweet Refrain</a>」 ... テンポ良くて作業用BGMとしてもGood!<br>
       ・日曜日のサンデーモーニングからワイドナショーの流れ<br>
       ・カイジ 「<a href="https://youtu.be/B28ufV4ojkQ" target="_blank" rel="noopener">柿ピー1日半欠けら</a>」になるシーン<br>
-      ・Perfumeの「<a href="https://youtu.be/CYL3DnyA4e0" target="_blank" rel="noopener">Sweet Refrain</a>」 ... テンポ良くて作業用BGMとしてもGood!<br>
-      <!-- ・マネーの虎 <a href="https://www.youtube.com/watch?v=gJ4Vh1iq7Bw" target="_blank" rel="noopener">うどん屋の回</a><br> -->
-      ・マイケルジョーダン<br>
-      ・ゲーム スマブラ、ウイイレ<br>
-      ・映画 インターステラー、インセプション、ソーシャルネットワーク<br>
+      ・マネーの虎 <a href="https://www.youtube.com/watch?v=gJ4Vh1iq7Bw" target="_blank" rel="noopener">うどん屋の回</a><br>
       <br>
       仕事の空き時間でWebサービス、アプリ開発してます。<br>
-      そっちで生計立てる +α の生活送る、を目標に。<br>
+      それで生計立てる +α の生活をする、ってところは必ず達成させる。<br>
       仕事もエンジニアなので、開発自体がスキルアップに繋がり転職のリスクヘッジにもなる。<br>
       そして、ちょっとした収入得れる + 単純に楽しい、でメリット計り知れないな、なんて思ってます。<br>
       これまでの実績は給料以外で50万ぐらい。ゆる〜くやってます。<br>
