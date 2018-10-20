@@ -39,7 +39,7 @@ export default class Slug extends Vue {
 
   head() {
     return {
-      title: this.title,
+      title: `${this.title} | Naochael Jordan`,
       meta: [
         {
           hid: "description",
