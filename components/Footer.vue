@@ -4,7 +4,7 @@
       <h2 v-if="showProfile">Author</h2>
 
       <div v-if="showProfile" class="box">
-        <img class="profile" width="200" height="200" src="~/assets/images/profile.png" alt="Naochael Jordan">
+        <img class="profile" width="200" height="200" src="~/assets/images/profile.jpg" alt="Naochael Jordan">
 
         <div class="info">
           <h3>Naochael Jordan</h3>
