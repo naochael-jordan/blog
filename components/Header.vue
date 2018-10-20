@@ -11,7 +11,7 @@
           <nuxt-link to="/">Blog</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/profile">Profile</nuxt-link>
+          <nuxt-link to="/profile/">Profile</nuxt-link>
         </li>
         <li>
           <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">

@@ -11,7 +11,7 @@
           <p>
             普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。<br>
             Nuxt, ReactNative, Electron, Vuex, Redux辺りをよく触ってます。
-            <nuxt-link to="/profile" class="more">...もっと見る</nuxt-link>
+            <nuxt-link to="/profile/" class="more">...もっと見る</nuxt-link>
           </p>
           <ul>
             <li>

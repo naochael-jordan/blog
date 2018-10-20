@@ -26,7 +26,7 @@ function getRoutes() {
     .readdirSync("./markdown")
     .filter(i => i.match(/.md$/))
     .map(f => f.replace(/.md$/, ""))
-    .map(f => `/${f}`);
+    .map(f => `/${f}/`);
 }
 
 module.exports = {

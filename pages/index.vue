@@ -4,7 +4,7 @@
     <ul>
       <li v-for="(post, index) in posts" :key="index">
         <p class="date">{{ format(post.attributes.date, 'YYYY-MM-DD') }}</p>
-        <nuxt-link :to="`/${post.fileName}`">
+        <nuxt-link :to="`/${post.fileName}/`">
           <p class="title">{{ post.attributes.title }}</p>
         </nuxt-link>
       </li>

@@ -52,7 +52,7 @@ export default class Slug extends Vue {
         },
         {
           name: "og:title",
-          content: this.title
+          content: `${this.title} | Naochael Jordan`
         },
         {
           name: "og:description",
