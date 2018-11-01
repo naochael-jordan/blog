@@ -6,26 +6,26 @@
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn
 
 # serve with hot reload at localhost:3000
-$ npm run dev # Or yarn dev
+$ yarn dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn generate
 
 # deploy gh-pages
-$ npm run deploy
+$ yarn deploy
 ```
 
 ## Deploy
 
 ``` bash
-# TravisCI will deploy('npm run generate') to GitHub Pages.
+# TravisCI will deploy('yarn generate') to GitHub Pages.
 # Notice will come in Slack when done.
 $ git push 
 ```
