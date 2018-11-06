@@ -107,8 +107,14 @@ module.exports = {
       }
     ],
     "@nuxtjs/markdownit",
-    "@nuxtjs/sitemap"
+    "@nuxtjs/sitemap",
+    "@nuxtjs/pwa"
   ],
+
+  manifest: {
+    name: "Naochael Jordan",
+    lang: "ja"
+  },
 
   markdownit: {
     preset: "default",
