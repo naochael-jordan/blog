@@ -18,3 +18,19 @@ React Nativeの開発で起きたエラーと解決策のまとめ
 https://www.haneca.net/react-native-cfbundleidentifier-error/
 https://stackoverflow.com/questions/37461703/print-entry-cfbundleidentifier-does-not-exist
 
+# yarn testでCouldn't find preset "module:metro-react-native-babel-preset"
+
+`yarn test` した時に下記のようなエラーが出た
+```
+Couldn't find preset "module:metro-react-native-babel-preset" relative to directory "/Users/naochael/Desktop/git/naochael-jordan/sandpit/ReactNative/rnt4"
+```
+
+→ 解決策
+.babelrcの中身を空っぽにしたら解決
+```
+{}
+```
+https://github.com/facebook/react-native/issues/21241#issuecomment-423610383
+
+
+
