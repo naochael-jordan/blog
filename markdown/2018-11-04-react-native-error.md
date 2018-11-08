@@ -23,7 +23,7 @@ react-native-git-upgrade
 https://www.haneca.net/react-native-cfbundleidentifier-error/
 https://stackoverflow.com/questions/37461703/print-entry-cfbundleidentifier-does-not-exist
 
-# yarn testでCouldn't find preset "module:metro-react-native-babel-preset"
+# Couldn't find preset "module:metro-react-native-babel-preset"
 
 TypeScriptな環境を作ってる時に出たエラーで
 `yarn test` した時に下記のようなエラーが出た
@@ -45,7 +45,7 @@ module.exports = function(api) {
 ```
 を記述すると無事テストも通るようになった
 
-`babel.config.js`は[babel自身](https://github.com/babel/babel/blob/master/babel.config.js)も使っていて、`.babelrc`より推奨されてるみたい。知らんかった。
+`babel.config.js`は[babel自身](https://github.com/babel/babel/blob/master/babel.config.js)も使っていて、`.babelrc`より推奨されてるみたい。知らなかった。
 
 参考
 https://github.com/facebook/react-native/issues/21241#issuecomment-431464191
