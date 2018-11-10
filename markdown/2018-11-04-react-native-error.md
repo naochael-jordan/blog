@@ -32,7 +32,7 @@ Couldn't find preset "module:metro-react-native-babel-preset" relative to direct
 ```
 
 ## 解決策
-`yarn add --dev babel-core@^7.0.0-bridge.0` して
+`yarn add --dev babel-core@^7.0.0-bridge.0 @babel/core` して
 `.babelrc` → `babel.config.js` にリネームして、
 ```
 module.exports = function(api) {
