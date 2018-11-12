@@ -29,6 +29,6 @@ tsconfig.jsonの`"allowSyntheticDefaultImports": true,`のコメントアウト�
 react-native run-ios
 ```
 
-<img src="./images/2018-11-12/iphone3.png" width="400">
+<img src="./images/2018-11-12/iphone3.png" width="50%">
 
 完了!

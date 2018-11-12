@@ -12,12 +12,17 @@ React Nativeの開発で起きたエラーと解決策のまとめ
 ”:CFBundleIdentifier”が見つからないもよう
 
 ## 解決策
+`/ios/プロジェクト名.xcodeproj`をXcodeで開いて、File → Project Settingsのメニューの中から「Advanced」を選択して、下記のように設定すると良かった。
+
+<img src="./images/2018-11-04/xcode.png" width="80%">
+
+もしくは別の解決策で、
 ```bash
 npm i -g react-native-git-upgrade
 react-native-git-upgrade
 ```
-で直った。
-※`react-native upgrade`でも直るっぽいけど、`react-native-git-upgrade`が公式にも載ってるupgradeの方法のようだった。
+でも直った。
+※さらに、`react-native upgrade`でも直るっぽいけど、`react-native-git-upgrade`が公式にも載ってるupgradeの方法のようで、`react-native upgrade`は[iOS全体の設定を上書きするような記載](https://stackoverflow.com/a/37505341)もあるのでやらない方が吉なのかも。
 
 ### 参考
 https://www.haneca.net/react-native-cfbundleidentifier-error/

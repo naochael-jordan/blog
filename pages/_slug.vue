@@ -122,6 +122,12 @@ export default class Slug extends Vue {
       line-height: 3rem;
     }
 
+    /deep/ img {
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
     /deep/ p {
       margin: 20px 0 4px;
     }
@@ -179,6 +185,10 @@ export default class Slug extends Vue {
         margin: 30px 0 0;
         font-size: 1.6rem;
         line-height: 2.2rem;
+      }
+
+      /deep/ img {
+        width: 100%;
       }
 
       /deep/ p {
