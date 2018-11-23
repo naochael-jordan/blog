@@ -49,6 +49,10 @@ Android側はAndroid Studioは使わない。ディレクトリに画像を入�
 `xxhdpi → 144 x 144`
 `xxxhdpi → 192 x 192`
 
+この`mipmap-mdpi`などのディレクトリ名と`ic_launcher.png`のファイル名は変更出来て、`android/app/src/main/AndroidManifest.xml`の`android:icon="@mipmap/ic_launcher"`で管理されている。
+
+またAndroid7.1からはアプリアイコンに丸いアイコンが追加されて`AndroidManifest.xml`で従来のアイコンの他に`android:roundIcon="@mipmap/ic_launcher_round"`を指定しておくと、対応デバイスで丸いアイコンが表示されるようになったもよう。
+
 差し替えた状態で`react-native run-android`してシミュレーター上でもアプリアイコンが変わっていたらOK!
 
 <img src="./images/2018-11-23/android.png" width="50%">
