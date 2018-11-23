@@ -42,6 +42,13 @@ Android側はAndroid Studioは使わない。ディレクトリに画像を入�
 `mipmap-xxxhdpi`
 のサイズ別のディレクトリがあって、すでにデフォルトのアプリアイコンの画像が格納されているので、そこの画像を差し替えする。
 
+画像サイズは下記のように格納する
+`mdpi → 48 x 48`
+`hdpi → 72 x 72`
+`xhdpi → 96 x 96`
+`xxhdpi → 144 x 144`
+`xxxhdpi → 192 x 192`
+
 差し替えた状態で`react-native run-android`してシミュレーター上でもアプリアイコンが変わっていたらOK!
 
 <img src="./images/2018-11-23/android.png" width="50%">
