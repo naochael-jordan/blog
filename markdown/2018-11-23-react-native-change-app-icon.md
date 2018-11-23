@@ -30,7 +30,7 @@ Xcodeでプロジェクトを開く(`/ios/hoge.xcodeproj`をXcodeで開く)
 
 これで`react-native run-ios`して、シミュレーター上でもアイコンが変更されてたらOK!
 
-<img src="./images/2018-11-23/iphone.png" width="30%">
+<img src="./images/2018-11-23/iphone.png" width="50%">
 
 # Andoirdでアプリのアイコンを設定する
 
@@ -44,6 +44,6 @@ Android側はAndroid Studioは使わない。ディレクトリに画像を入�
 
 差し替えた状態で`react-native run-android`してシミュレーター上でもアプリアイコンが変わっていたらOK!
 
-<img src="./images/2018-11-23/android.png" width="30%">
+<img src="./images/2018-11-23/android.png" width="50%">
 
 シミュレーターでうまくいってたら実機側も問題なくアイコン画像変わってた! おしまい。
