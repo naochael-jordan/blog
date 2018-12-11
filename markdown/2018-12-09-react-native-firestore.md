@@ -11,32 +11,34 @@ ReactNative + Firestoreの環境構築を進めていたけど、結構ハマり
 まずはプロジェクトの作成から
 ```bash
 react-native init hogehoge
-react-native run-ios # ちゃんと立ち上がるか見ておく(これしないと後々のこれで CFBundleIdentifierのエラーが出る事があった..)
+cd hogehoge
 ```
 
-問題なく立ち上がったら、必要なモジュールをインストールする。
+必要なモジュールをインストール
 ```bash
 yarn add react-native-firebase
 ```
 
-`GoogleService-Info.plist`を入れたり、ソースの修正が必要なので、Xcodeを立ち上げる。
+ここから`GoogleService-Info.plist`を入れたり、ソースの修正が必要なので、Xcodeを立ち上げる。
 ```bash
 open ios/{PROJECT_NAME}.xcodeproj
 ```
 
 Firebaseでプロジェクトを作って、 `GoogleService-Info.plist` をダウンロード。
-この辺りは、[ドキュメントを参照](https://rnfirebase.io/docs/v5.x.x/installation/initial-setup)するしてダウンロードまで進める。
+この辺りは、[ドキュメントを参照](https://rnfirebase.io/docs/v5.x.x/installation/initial-setup)してダウンロードまで進める。
 
-それと、Firestoreを使うので、Firestore上で最初の使いますボタンをポチだけ終わらせとく。
+それと、Firestoreを使うので、ブラウザのFirestore上で最初の使いますボタンのポチ、だけは終わらせとく。
 
 `GoogleService-Info.plist`がダウンロード出来たら、それをXcodeのプロジェクト内にドラッグして入れる。
-その際にリファレンス付けるかのポップアップが出るので、リファレンス付きで入れるようにする。
-(直接Finderなどから`ios`直下に入れてもダメで、ちゃんとドラッグしてリファレンス付きで入れたらよかった。ちゃんと入ってないとrun-iosした時にアプリが立ち上がってすぐにエラー画面なくクラッシュした感じになる)
+その際にリファレンス付けるポップアップが出るので、リファレンス付きで入れるようにする。
+
+直接Finderなどから`ios`直下に入れてもダメで、ちゃんとドラッグしてリファレンス付きで入れる必要がある。
+ちゃんと入ってないとrun-iosした時にアプリが立ち上がってすぐにエラー画面もなくクラッシュする。
 	
 またXcodeのBundleIDをGoogleService-info.plistのBundleIDと合わせる。
-合わせなくてもrun-iosは走るが、たぶん最終的にXcodeでビルドする時にエラーになるっぽい。
+合わせなくてもrun-iosは走るが、たぶん最終的にXcodeでビルドする時はエラーになる。
 
-次にXcode上の`AppDelegate.m`を開いて、先頭に下記を追加。先頭と言ってもファイルの先頭である必要はなく、他の`#import`の下とかで良い。
+次にXcode上の`AppDelegate.m`を開いて、先頭に下記を追加。先頭と言ってもファイルの先頭である必要はない。他の`#import`の下とかで良い。
 ```
 #import <Firebase.h>
 ```
@@ -54,56 +56,68 @@ cd ios
 pod init
 ```
 
-`Podfile`が出来たら下記をする
-- `platform :ios, '9.0'`のコメントアウトを外す
-- `pod 'Firebase/Core'` を足す
-- 下記の部分をコメントにする(pod install時にエラー出るので)
-```
+`Podfile`されるので下記のように編集する。
+```bash
+platform :ios, '9.0' # ここのコメントを外す
+
+`pod 'Firebase/Core'`
+
+# これはコメントアウトしないとpod install出来ない
 # target 'rnf9-tvOSTests' do
 #   inherit! :search_paths
 #   # Pods for testing
 # end
 ```
 
-※`pod 'Firebase/Firestore'`を`pod 'Firebase/Core'`と一緒に書いて入れたいところだけど、なぜかCoreと一緒にインストールすると、エラーが出て動かない。まずCoreを入れて、そのあとにFirestoreを入れるとうまく動いた。
+※注意点
+通常なら、`pod 'Firebase/Firestore'`を`pod 'Firebase/Core'`の下とかに書いて一緒に入れたいけど、なぜかCoreと一緒にインストールすると、run-ios時にエラーが出て動かない。まずCoreを入れてlinkしてFirebaseの構築が出来た後にFirestoreを入れる手順だと無事動いた。
 
-上記の`Podfile`の修正が終わったら
+その時のエラー文↓ は？って感じだ。
+```
+ RNFirebase core module was not found natively on iOS, ensure you have correctly included the RNFirebase pod in your projects `Podfile` and have run `pod install`.
+```
+
+上の`Podfile`の修正が終わったら
 ```
 pod install
 ```
 
-`pod 'Firebase/Core'`のインストールが終わったら、`Podfile`にFirestoreを書き足す。
-```
-pod 'Firebase/Firestore'
-```
-
-もう一度、インストール。(なんだこのステップ..)
-```
-pod install
-```
-
-最後にそれらのモジュールをlinkする
+react-native-firebaseをlinkする
 ```bash
 cd ../
 react-native link react-native-firebase
 ```
 
-ちゃんと使えるかチェックする。App.jsに下記を追加。
-```js
-import firebase from "react-native-firebase";
-const main = async () => {
-  await firebase
-    .firestore()
-    .collection("hoge")
-    .add({
-      value: '入ってーーー',
-    });
-};
-main();
+linkが終わったタイミングで、`Podfile`にFirestoreを書き足す。
+```bash
+pod 'Firebase/Firestore'
 ```
 
+もうFirestoreをインストール
+```
+pod install
+```
+
+これで動くはずなので、App.jsに以下を追加。
+```js
+import firebase from "react-native-firebase";
+
+firebase
+  .firestore()
+  .collection("hoge")
+  .add({
+    value: '入ってーーー',
+  });
+```
+
+ちゃんと使えるかチェックする。
 ```bash
 react-native run-ios
 ```
 
-更新のたびに、Firestoreにデータが格納されていけば成功。
+エラーなく初期画面が立ち上がって、更新するたびにFirestoreにデータが格納されていけば成功。
+
+# まとめ
+Firestoreをpod installするタイミングとかが結構、謎でCoreと一緒のタイミングで入れたいけどダメだった。
+GoogleService-info.plistもディレクトリに単に放り込めば良い的なものを見たが、Xcodeから入れないとダメだった。
+結構、はてなが付く事が多いが、これで開発進められるはず..!
