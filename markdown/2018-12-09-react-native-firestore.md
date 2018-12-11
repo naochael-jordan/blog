@@ -60,7 +60,7 @@ pod init
 ```bash
 platform :ios, '9.0' # ここのコメントを外す
 
-`pod 'Firebase/Core'`
+pod 'Firebase/Core'
 
 # これはコメントアウトしないとpod install出来ない
 # target 'rnf9-tvOSTests' do
@@ -72,10 +72,8 @@ platform :ios, '9.0' # ここのコメントを外す
 ※注意点
 通常なら、`pod 'Firebase/Firestore'`を`pod 'Firebase/Core'`の下とかに書いて一緒に入れたいけど、なぜかCoreと一緒にインストールすると、run-ios時にエラーが出て動かない。まずCoreを入れてlinkしてFirebaseの構築が出来た後にFirestoreを入れる手順だと無事動いた。
 
-その時のエラー文↓ は？って感じだ。
-```
- RNFirebase core module was not found natively on iOS, ensure you have correctly included the RNFirebase pod in your projects `Podfile` and have run `pod install`.
-```
+その時のエラー文(は？って感じだ。)↓
+**RNFirebase core module was not found natively on iOS, ensure you have correctly included the RNFirebase pod in your projects `Podfile` and have run `pod install`.**
 
 上の`Podfile`の修正が終わったら
 ```
