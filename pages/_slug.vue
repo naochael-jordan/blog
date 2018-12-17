@@ -117,7 +117,7 @@ export default class Slug extends Vue {
 
   h1 {
     font-size: 4.2rem;
-    line-height: 5.2rem;
+    line-height: 5.7rem;
     font-weight: 600;
   }
 
@@ -133,7 +133,7 @@ export default class Slug extends Vue {
       margin: 60px 0 10px;
       padding-bottom: 10px;
       font-size: 2.6rem;
-      line-height: 2.6rem;
+      line-height: 4.2rem;
       border-bottom: 1px solid #efefef;
     }
 
@@ -141,6 +141,10 @@ export default class Slug extends Vue {
       margin: 40px 0 0;
       font-size: 2rem;
       line-height: 3rem;
+    }
+
+    /deep/ li {
+      margin-bottom: 4px;
     }
 
     /deep/ img {
