@@ -13,7 +13,7 @@ date: 2018-11-30
 # 全体の流れ
 
 まずはざっくりとした全体の流れから。
-1. **index.html, css, jsとかのアセットをS3に配置して静的ホスティングする**
+1. **html, css, jsとかのアセットをS3に配置して静的ホスティングする**
 1. **そのS3をCloudFront経由で配信する**
 1. **LambdaのViewer RequestでUserAgentからボットの判別をして、ボットだったらカスタムヘッダーを付与する**
 1. **LambdaのOrigin Requestでボット用のカスタムヘッダーが付いてたらPuppeteerでダイナミックレンダリングする**
@@ -25,57 +25,56 @@ Viewer RequestやOrigin RequestなどのLambda@Edgeのライフサイクルイ�
 # LambdaのViewer RequestでUserAgentからボットの判別をして、ボットだったらカスタムヘッダーを付与する
 
 ほとんど参考記事のままだが、下記のようなViewer Request Functionを準備して、Lambda上のエディタにペーストしてデプロイ。
+やっているのは、UserAgentがクローラーで、かつhtmlへのリクエストだったらダイナミックレンダリング用のカスタムヘッダーをつける、という感じ。
 ```js
 "use strict";
-
-const crawlers = [
-  "Googlebot",
-  "facebookexternalhit",
-  "Twitterbot",
-  "bingbot",
-  "msnbot"
-];
-
-const excludeSuffixes = [
-  "jpg",
-  "png",
-  "gif",
-  "jpeg",
-  "svg",
-  "css",
-  "js",
-  "json",
-  "txt",
-  "ico",
-  "map"
-];
-
-const HTTP_HEAD_NEED_DR = "x-need-dynamic-render";
 
 exports.handler = (event, context, callback) => {
   const request = event.Records[0].cf.request;
   const headers = request.headers;
+  
+  const crawlers = [
+    "Googlebot",
+    "facebookexternalhit",
+    "Twitterbot",
+    "bingbot",
+    "msnbot"
+  ];
 
-  const suffix =
-    request.uri == null || request.uri == "/"
+  const excludeExtentions = [
+    "jpg",
+    "png",
+    "gif",
+    "jpeg",
+    "svg",
+    "css",
+    "js",
+    "json",
+    "txt",
+    "ico",
+    "map"
+  ];
+
+  const dynamicRenderHeaderName = "X-Need-Dynamic-Render";
+
+  const extention =
+    request.uri === null || request.uri === "/"
       ? ""
       : request.uri
-          .split("?")
-          .shift()
           .split(".")
           .pop()
           .toLowerCase();
-  const maybeHtml = !excludeSuffixes.some(es => es === suffix);
+  const maybeHtml = !excludeExtentions.some(e => e === extention);
 
   const isCrawler = crawlers.some(c => {
     return headers["user-agent"][0].value.includes(c);
   });
 
-  // UserAgentがクローラーで、かつhtmlのアクセスだったらカスタムヘッダーをつける
+  // UserAgentがクローラーで、かつhtmlへのリクエストだったらカスタムヘッダーをつける
   if (isCrawler && maybeHtml) {
-    request.headers[HTTP_HEAD_NEED_DR] = [
+    request.headers[dynamicRenderHeaderName.toLowerCase()] = [
       {
-        key: "X-Need-Dynamic-Render",
+        key: dynamicRenderHeaderName,
         value: "true"
       }
     ];
@@ -95,7 +94,7 @@ exports.handler = (event, context, callback) => {
 
 という感じ。
 
-Serverlessを使うとzip化してデプロイの作業が効率化出来るので実案件とかだと使った方が良さそう。
+Serverlessを使うとzip化してデプロイの作業が効率化出来るので実案件とかだと使った方が良さそうか。
 
 ローカルの作業場所はどこでも良いので、おもむろに `npm init -y` とかでpackage.jsonを生成する。
 そして必要なモジュールを`npm install`していく
@@ -110,7 +109,7 @@ Serverlessを使うとzip化してデプロイの作業が効率化出来るの�
 `puppeteer-core`じゃなくて`puppeteer`を普通に`npm install`すると、Chromiumも一緒にダウンロードしてしまって、そうなるとLambdaの50MBの制限に容易に引っかかってしまう。
 なのでPuppeteer1.7以降から追加された、`puppeteer-core`をインストールするようにする。
 
-インストール出来たら実際にPuppeteerを使ってダイナミックレンダリングする実装を`index.js`に書いていく。
+インストール出来たら実際にPuppeteerを使ってダイナミックレンダリングの実装を`index.js`に書いていく。
 ```js
 "use strict";
 
@@ -119,12 +118,12 @@ const CDP = require("chrome-remote-interface");
 const puppeteer = require("puppeteer-core");
 
 exports.handler = async (event, context, callback) => {
-  const HTTP_HEAD_NEED_DR = "x-need-dynamic-render";
+  const dynamicRenderHeaderName = "X-Need-Dynamic-Render";
   const request = event.Records[0].cf.request;
   const headers = request.headers;
 
   // クローラーじゃなかったら何もしない
-  if (!headers[HTTP_HEAD_NEED_DR]) return callback(null, request);
+  if (!headers[dynamicRenderHeaderName.toLowerCase()]) return callback(null, request);
 
   // クローラーだったら、ダイナミックレンダリングする
   let slsChrome = null;
@@ -225,7 +224,8 @@ Origin Requestのデフォルトの設定だと、WebSocketでPuppeteerとconnec
 <img src="./images/2018-11-30/fetch.png" width="100%">
 
 # まとめ
-Lambdaの仕組みからよく分かってなかったのでキャッチアップしながら進めて、ちゃんとPuppeteerで動かすところまでいけたのはよかった。
-実際にはLambda上でPuppeteerを動かすところまでが割りかし大変で、動いてしまえば後は下り坂を降りてる気分だった。
+Lambda + Puppeteerでダイナミックレンダリングが出来た。
+Lambdaの仕組みからよく分かってなかったのでキャッチアップしながら進めて、内容的にもそこまで難しくもないだろうと思っていたが、Lambdaの50MBの制限やメモリを上げないといけなかった事とかハマるポイントはあった。
+実際は`LambdaでPuppeteerを動す`が出来たらあとはhtml取得して返すだけなので、動かすところまでがキモになりそう。
 
 おしまい。
