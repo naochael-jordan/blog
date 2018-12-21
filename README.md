@@ -1,6 +1,7 @@
 # blog
 
-> Nuxt.js + TypeScript + Markdown
+- Nuxt.js + TypeScript + Markdown
+- git pushしたらTravisでGithub Pagesデプロイして、完了したらSlackで通知
 
 ## Build Setup
 
