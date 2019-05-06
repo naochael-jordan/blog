@@ -88,9 +88,7 @@ export default class Slug extends Vue {
   }
 
   beforeCreate() {
-    if (process.browser) {
-      location.href = `https://naokiotsu.github.io/blog${this.$route.path}`;
-    }
+    location.href = `https://naokiotsu.github.io/blog${this.$route.path}`;
   }
 
   created() {
