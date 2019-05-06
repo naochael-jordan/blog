@@ -1,52 +1,5 @@
 <template>
-  <footer>
-    <section class="container">
-      <h2 v-if="showProfile">Author</h2>
-
-      <div v-if="showProfile" class="box">
-        <img class="profile" width="200" height="200" src="~/assets/images/profile.jpg" alt="Naochael Jordan">
-
-        <div class="info">
-          <h3>Naochael Jordan</h3>
-          <p>
-            普段はフロントエンドエンジニアしながら、Webサービスとかアプリ開発してます。<br>
-            Nuxt, ReactNative, Electron, Vuex, Redux辺りをよく触ってます。
-            <nuxt-link to="/profile/" class="more">...もっと見る</nuxt-link>
-          </p>
-          <ul>
-            <li>
-              <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">
-                <img src="~/assets/svg/twitter.svg" width="24" height="24" alt="Naochael Jordan Twitter">
-              </a>
-              <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">
-                @NaochaelJ
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/naochael-jordan" target="_blank" rel="noopener">
-                <img src="~/assets/images/github.png" width="24" height="24" alt="Naochael Jordan Github">
-              </a>
-              <a href="https://github.com/naochael-jordan" target="_blank" rel="noopener">
-                naochael-jordan
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/naochael.jordan/" target="_blank" rel="noopener">
-                <img src="~/assets/svg/instagram.svg" width="24" height="24" alt="Naochael Jordan Github">
-              </a>
-              <a href="https://www.instagram.com/naochael.jordan/" target="_blank" rel="noopener">
-                naochael.jordan
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <address>
-        <small>Naochael Jordan © {{new Date().getFullYear()}}</small>
-      </address>
-    </section>
-  </footer>
+  <footer></footer>
 </template>
 
 

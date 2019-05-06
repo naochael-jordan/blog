@@ -1,31 +1,5 @@
 <template>
-  <header>
-    <h1>
-      <nuxt-link to="/">
-        <span>Naochael</span>Jordan
-      </nuxt-link>
-    </h1>
-    <nav>
-      <ul>
-        <li>
-          <nuxt-link to="/">Blog</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/profile/">Profile</nuxt-link>
-        </li>
-        <li>
-          <a href="https://twitter.com/NaochaelJ" target="_blank" rel="noopener">
-            Twitter
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/naochael-jordan" target="_blank" rel="noopener">
-            Github
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <header></header>
 </template>
 
 <style lang="scss" scoped>

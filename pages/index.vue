@@ -1,43 +1,14 @@
 <template>
-  <section>
-    <ul>
-      <li v-for="(post, index) in posts" :key="index" v-once>
-        <p v-if="showMonth(post.attributes.date, index)" class="month">{{ year }}</p>
-        <div class="contents">
-          <p class="date">{{ format(post.attributes.date, 'YYYY年MM月DD日') }}</p>
-          <nuxt-link :to="`/${post.fileName}/`">
-            <p class="title">{{ post.attributes.title }}</p>
-          </nuxt-link>
-        </div>
-      </li>
-    </ul>
-  </section>
+  <section></section>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import { format } from "date-fns";
 
 @Component({})
-export default class Index extends Vue {
-  format = format;
-  year = "";
-
-  get posts() {
-    return this.$store.state.posts;
-  }
-
-  showMonth(date, index) {
-    const year = format(date, "YYYY");
-    if (year === this.year) {
-      return false;
-    } else {
-      this.year = year;
-      return true;
-    }
-  }
-}
+export default class Index extends Vue {}
 </script>
+
 <style lang="scss" scoped>
 @import "~/assets/css/variables.scss";
 

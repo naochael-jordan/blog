@@ -1,115 +1,16 @@
 <template>
-  <div class="container">
-    <h1>{{ title }}</h1>
-    <p class="date">{{ format(date, 'YYYY-MM-DD') }}</p>
-    <div v-html="htmlContent" class="contents"></div>
-
-    <div class="sns">
-      <!-- Twitter -->
-      <div class="twitter">
-        <a
-          href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-          class="twitter-share-button"
-          data-show-count="false"
-        >Tweet</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      </div>
-
-      <!-- はてブ -->
-      <div class="hatena">
-        <a
-          href="http://b.hatena.ne.jp/entry/"
-          class="hatena-bookmark-button"
-          data-hatena-bookmark-layout="basic-label-counter"
-          data-hatena-bookmark-lang="ja"
-          title="このエントリーをはてなブックマークに追加"
-        >
-          <img
-            src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"
-            alt="このエントリーをはてなブックマークに追加"
-            width="20"
-            height="20"
-            style="border: none;"
-          >
-        </a>
-        <script
-          type="text/javascript"
-          src="https://b.st-hatena.com/js/bookmark_button.js"
-          charset="utf-8"
-          async="async"
-        ></script>
-      </div>
-    </div>
-  </div>
+  <div class="container"></div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from "nuxt-property-decorator";
-import { format } from "date-fns";
 
 @Component({})
 export default class Slug extends Vue {
-  format = format;
-
-  async asyncData({ params }) {
-    const htmlContent = await require(`~/markdown/${params.slug}.md`);
-    return {
-      htmlContent
-    };
-  }
-
-  head() {
-    return {
-      title: `${this.title} | Naochael Jordan`,
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.body
-        },
-        {
-          name: "twitter:card",
-          content: "summary"
-        },
-        {
-          name: "og:title",
-          content: `${this.title} | Naochael Jordan`
-        },
-        {
-          name: "og:description",
-          content: this.body
-        },
-        {
-          name: "og:image",
-          content: "https://naochael-jordan.github.io/blog/images/profile.jpg"
-        }
-      ]
-    };
-  }
-
   beforeCreate() {
     if (process.browser) {
       location.href = `https://naokiotsu.github.io/blog${this.$route.path}`;
     }
-  }
-
-  created() {
-    const post = this.$store.state.posts.find(
-      post => post.fileName === this.$route.path.replace(/\//g, "")
-    );
-    this.$store.commit("setPost", post);
-  }
-
-  get title() {
-    return this.$store.state.post.attributes.title;
-  }
-
-  get date() {
-    return this.$store.state.post.attributes.date;
-  }
-
-  get body() {
-    return this.$store.state.post.body.replace(/\r?\n/g, "");
   }
 }
 </script>
