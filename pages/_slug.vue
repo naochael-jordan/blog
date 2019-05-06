@@ -87,6 +87,12 @@ export default class Slug extends Vue {
     };
   }
 
+  beforeCreate() {
+    if (process.browser) {
+      location.href = `https://naokiotsu.github.io/blog${this.$route.path}`;
+    }
+  }
+
   created() {
     const post = this.$store.state.posts.find(
       post => post.fileName === this.$route.path.replace(/\//g, "")
