@@ -9,7 +9,7 @@ import { Vue, Component } from "nuxt-property-decorator";
 export default class Slug extends Vue {
   beforeCreate() {
     if (process.browser) {
-      location.href = `https://naokiotsu.github.io/blog${this.$route.path}`;
+      location.href = `https://naoki-otsu.com/blog${this.$route.path}`;
     }
   }
 }
